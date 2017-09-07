@@ -1,9 +1,11 @@
 angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicenseConsumptionCtrl", class MicrosoftOfficeLicenseConsumptionCtrl {
 
-    constructor ($stateParams, $scope, MicrosoftOfficeLicenseService) {
+    constructor ($stateParams, $scope, MicrosoftOfficeLicenseService, ChartjsFactory, OFFICE_LICENSE_CONSUMPTION) {
         this.$stateParams = $stateParams;
         this.$scope = $scope;
         this.licenseService = MicrosoftOfficeLicenseService;
+        this.ChartjsFactory = ChartjsFactory;
+        this.constant = { OFFICE_LICENSE_CONSUMPTION };
 
         this.periods = [
             { key: "current", value: 1 },
@@ -50,19 +52,32 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             .then((series) => {
                 this.stats = series;
                 this.stats.title.text = this.$scope.tr(`microsoft_office_license_usage_period_${this.selectedPeriod}`);
+
+                this.chart = new this.ChartjsFactory(angular.copy(this.constant.OFFICE_LICENSE_CONSUMPTION.chart));
+                this.chart.setAxisOptions("yAxes", {
+                    type: "linear"
+                });
+                angular.forEach(this.stats.series, (serie) => {
+                    this.chart.addSerie(
+                        serie.name,
+                        _.map(serie.data, (point) => ({
+                            x: point[0],
+                            y: point[1]
+                        })),
+                        {
+                            dataset: {
+                                fill: true,
+                                borderWidth: 1
+                            }
+                        }
+                    );
+                });
             })
             .catch((err) => { this.errorMessage = err.message; })
             .finally(() => {
                 this.loaders.charts = false;
-
-                if (_.last(Highcharts.charts)) {
-                    this.$timeout(() => {
-                        _.last(Highcharts.charts).redraw();
-                    }, 300);
-                }
             });
     }
-
 
     calculateRenewalDate (day, monthOffset = 0) {
         const renewal = this.calculateExpirationDate(day, monthOffset);
@@ -94,5 +109,55 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             fromDate: this.calculateRenewalDate(this.renewDate, 0 - startingMonthOffset),
             toDate: this.calculateExpirationDate(this.renewDate, endingMonthOffset)
         };
+    }
+}).constant("OFFICE_LICENSE_CONSUMPTION", {
+    chart: {
+        type: "line",
+        data: {
+            datasets: []
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: "bottom",
+                display: true
+            },
+            elements: {
+                point: {
+                    radius: 0
+                }
+            },
+            tooltips: {
+                mode: "label",
+                intersect: false,
+                callbacks: {
+                    title (data) {
+                        return moment(_.get(_.first(data), "xLabel")).fromNow();
+                    }
+                }
+            },
+            scales: {
+                yAxes: [{
+                    display: true,
+                    position: "left",
+                    scaleLabel: {
+                        display: true
+                    },
+                    gridLines: {
+                        drawBorder: true,
+                        display: true
+                    }
+                }],
+                xAxes: [{
+                    type: "time",
+                    position: "bottom",
+                    gridLines: {
+                        drawBorder: true,
+                        display: false
+                    }
+                }]
+            }
+        }
     }
 });
