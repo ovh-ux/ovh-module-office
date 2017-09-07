@@ -28,7 +28,8 @@
              data-ng-if="!consumptionCtrl.loaders.charts && consumptionCtrl.stats && !consumptionCtrl.stats.series.length">
         </div>
 
-        <highchart data-config="consumptionCtrl.stats"
-                   data-ng-if="!lconsumptionCtrl.loaders.charts && consumptionCtrl.stats.series.length"></highchart>
+        <div class="chart-container" style="height: 320px;"
+             data-ng-if="!consumptionCtrl.loaders.charts && consumptionCtrl.stats.series.length"
+             data-chartjs="consumptionCtrl.chart"></div>
     </div>
 </div>

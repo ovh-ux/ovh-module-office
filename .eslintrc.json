@@ -5,7 +5,6 @@
     },
     "globals": {
         "module": true,
-        "require": true,
-        "Highcharts": true
+        "require": true
     }
 }

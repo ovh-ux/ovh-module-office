@@ -3,18 +3,10 @@ angular.module("Module.microsoft", [
     "ngRoute",
     "ui.bootstrap",
     "ngSanitize",
-    "highcharts-ng",
     "Module.microsoft.controllers",
     "Module.microsoft.services"
 ]).config(["$stateProvider", function ($stateProvider) {
     "use strict";
-
-    // Highcharts global
-    Highcharts.setOptions({
-        global: {
-            useUTC: false
-        }
-    });
 
     $stateProvider.state("app.microsoft.office", {
         "abstract": true,
