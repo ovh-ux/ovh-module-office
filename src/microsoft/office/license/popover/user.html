@@ -1,0 +1,16 @@
+<div class="popover-menu">
+    <button class="btn btn-link" type="button"
+            data-i18n-static="microsoft_office_license_user_change_password"
+            data-ng-click="setAction('edit/password/microsoft-office-edit-password', {'user': user, 'licenseId': currentLicense, 'license': license})"
+            data-ng-disabled="user.isVirtual">
+    </button>
+    <button class="btn btn-link" type="button"
+            data-i18n-static="microsoft_office_license_user_update"
+            data-ng-click="setAction('user/update/microsoft-office-license-user-update', {'user': user, 'licenseId': currentLicense, 'license': license})">
+    </button>
+    <button class="btn btn-link" type="button"
+            data-i18n-static="microsoft_office_license_user_delete"
+            data-ng-click="setAction('user/delete/microsoft-office-license-user-delete', {'user': user, 'license': currentLicense})"
+            data-ng-disabled="user.isVirtual">
+    </button>
+</div>

@@ -1,0 +1,95 @@
+<div data-ng-controller="MicrosoftOfficeLicenseUserUpdateCtrl as updateUserCtrl">
+    <div data-wizard
+         data-wizard-bread-crumb
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="updateUser"
+         data-wizard-title="i18n.microsoft_office_license_user_edit">
+
+        <div data-wizard-step
+             data-wizard-step-valid="updateUserCtrl.user.firstName && updateUserCtrl.user.lastName && updateUserCtrl.user.login">
+
+            <form class="form-horizontal mt-4" name="microsoftOfficeLicenseUserUpdateForm">
+                <small class="d-block mb-4"
+                       data-ng-bind-html="tr('microsoft_office_license_add_user_field_required', ['<span class=text-danger>*</span>'])"></small>
+
+                <div class="form-group"
+                     data-ng-class="{'has-error': microsoftOfficeLicenseUserUpdateForm.firstName.$dirty && microsoftOfficeLicenseUserUpdateForm.firstName.$invalid}">
+                    <label class="control-label col-md-4 required" for="firstName"
+                           data-i18n-static="microsoft_office_license_add_user_firstName_label"></label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="firstName" name="firstName" required
+                                data-ng-model="updateUserCtrl.user.firstName">
+                        <small class="help-block"
+                               data-i18n-static="microsoft_office_license_add_user_required"
+                               data-ng-if="microsoftOfficeLicenseUserUpdateForm.firstName.$dirty && microsoftOfficeLicenseUserUpdateForm.firstName.$invalid">
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group"
+                     data-ng-class="{'has-error': microsoftOfficeLicenseUserUpdateForm.lastName.$dirty && microsoftOfficeLicenseUserUpdateForm.lastName.$invalid}">
+                    <label class="control-label col-md-4 required" for="lastName"
+                           data-i18n-static="microsoft_office_license_add_user_lastName_label"></label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="lastName" name="lastName" required
+                               data-ng-model="updateUserCtrl.user.lastName">
+                        <small class="help-block"
+                               data-i18n-static="microsoft_office_license_add_user_required"
+                               data-ng-if="microsoftOfficeLicenseUserUpdateForm.lastName.$dirty && microsoftOfficeLicenseUserUpdateForm.lastName.$invalid">
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group"
+                     data-ng-class="{
+                         'has-error': microsoftOfficeLicenseUserUpdateForm.login.$dirty && microsoftOfficeLicenseUserUpdateForm.login.$invalid,
+                         'has-success': microsoftOfficeLicenseUserUpdateForm.login.$dirty && microsoftOfficeLicenseUserUpdateForm.login.$valid}">
+                    <label class="control-label col-md-4 required" for="login"
+                           data-i18n-static="microsoft_office_license_add_user_login_label"></label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="login" name="login" required
+                               data-ng-minLength="3"
+                               data-ng-maxLength="20"
+                               data-ng-model="updateUserCtrl.user.login"
+                               data-ng-pattern="updateUserCtrl.loginPattern"
+                               data-ng-trim="true">
+                        <div data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$dirty">
+                            <small class="help-block"
+                                   data-i18n-static="microsoft_office_license_add_user_required"
+                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.required">
+                            </small>
+                            <small class="help-block"
+                                   data-i18n-static="microsoft_office_license_add_user_login_minlength"
+                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.minlength">
+                            </small>
+                            <small class="help-block"
+                                   data-i18n-static="microsoft_office_license_add_user_login_maxlength"
+                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.maxlength">
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div data-wizard-step
+             data-wizard-step-valid="!updateUserCtrl.loaders.userEdit">
+
+            <div class="loader text-center" data-ng-if="updateUserCtrl.loaders.userEdit"></div>
+
+            <div data-ng-if="!updateUserCtrl.loaders.userEdit">
+                <p data-i18n-static="microsoft_office_license_edit_user_confirm"></p>
+                <dl class="dl-horizontal dl-lg">
+                    <dt data-i18n-static="microsoft_office_license_add_user_firstName_label"></dt>
+                    <dd data-ng-bind="updateUserCtrl.user.firstName"></dd>
+
+                    <dt data-i18n-static="microsoft_office_license_add_user_lastName_label"></dt>
+                    <dd data-ng-bind="updateUserCtrl.user.lastName"></dd>
+
+                    <dt data-i18n-static="microsoft_office_license_add_user_login_label"></dt>
+                    <dd data-ng-bind="updateUserCtrl.user.login"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

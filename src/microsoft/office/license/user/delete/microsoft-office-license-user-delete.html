@@ -1,0 +1,21 @@
+<div data-ng-controller="MicrosoftOfficeLicenseUserDeleteCtrl as deleteUserCtrl">
+    <div data-wizard
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="deleteUser"
+         data-wizard-title="i18n.microsoft_office_license_detail_user_delete_title">
+
+        <div data-wizard-step
+             data-wizard-step-valid="!deleteUserCtrl.loaders.deleting">
+
+            <div class="loader text-center" data-ng-if="deleteUserCtrl.loaders.deleting"></div>
+
+            <div data-ng-if="!deleteUserCtrl.loaders.deleting">
+                <p data-ng-bind-html="tr('microsoft_office_license_detail_user_delete_confirm', [deleteUserCtrl.user.activationEmail])"></p>
+                <ul>
+                    <li data-i18n-static="microsoft_office_license_detail_user_delete_info1"></li>
+                    <li data-i18n-static="microsoft_office_license_detail_user_delete_info2"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
