@@ -87,10 +87,8 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         this.editMode = true;
     }
 
-    resetDisplayName (event) {
-        if (event.keyCode === 27) {
-            this.editMode = false;
-        }
+    resetDisplayName () {
+        this.editMode = false;
     }
 
     saveDisplayName (license, tenant) {
