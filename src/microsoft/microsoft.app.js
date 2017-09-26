@@ -8,12 +8,12 @@ angular.module("Module.microsoft", [
 ]).config(["$stateProvider", function ($stateProvider) {
     "use strict";
 
-    $stateProvider.state("app.microsoft.office", {
+    $stateProvider.state("web.microsoft.office", {
         "abstract": true,
         template: "<div ui-view></div>"
     });
 
-    $stateProvider.state("app.microsoft.office.product", {
+    $stateProvider.state("web.microsoft.office.product", {
         url: "/configuration/microsoft/office/license/:serviceName?tab",
         templateUrl: "microsoft/office/license/microsoft-office-license.html",
         controller: "MicrosoftOfficeLicenseCtrl",
