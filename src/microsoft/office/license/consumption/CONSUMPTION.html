@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-center" data-ng-if="consumptionCtrl.loaders.charts">
-        <oui-loader class="d-inline-block" size="l"></oui-loader>
+        <oui-loader inline="true"></oui-loader>
     </div>
 
     <div data-ng-if="!consumptionCtrl.errorMessage && !consumptionCtrl.loaders.charts">
@@ -25,7 +25,7 @@
                                     data-ng-bind="i18n['microsoft_office_license_usage_period_' + period.key]"
                                     value="{{period.key}}"></option>
                         </select>
-                        <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+                        <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </div>
             </div>
