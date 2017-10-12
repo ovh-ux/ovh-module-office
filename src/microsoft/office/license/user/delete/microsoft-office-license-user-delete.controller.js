@@ -18,8 +18,8 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             this.loaders.deleting = true;
 
             this.license.deleteUser(this.$scope.currentActionData.license, this.user.activationEmail)
-                .then(() => this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_delete_success"), this.$scope.alerts.dashboard))
-                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_delete_error"), err, this.$scope.alerts.dashboard))
+                .then(() => this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_delete_success"), this.$scope.alerts.main))
+                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_delete_error"), err, this.$scope.alerts.main))
                 .finally(() => {
                     this.loaders.deleting = false;
                     this.$rootScope.$broadcast("microsoft.office.license.user.delete");

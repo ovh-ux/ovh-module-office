@@ -32,10 +32,10 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
                 activationEmail: `${this.user.login}@${this.user.service}`
             })
                 .then((task) => {
-                    this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_edit_success"), this.$scope.alerts.dashboard);
+                    this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_edit_success"), this.$scope.alerts.main);
                     return task;
                 })
-                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_edit_error"), err, this.$scope.alerts.dashboard))
+                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_edit_error"), err, this.$scope.alerts.main))
                 .finally(() => {
                     this.loaders.userEdit = false;
                     this.$rootScope.$broadcast("microsoft.office.license.user.edit");

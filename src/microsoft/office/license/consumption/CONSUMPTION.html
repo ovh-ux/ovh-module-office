@@ -1,4 +1,5 @@
 <div class="container-fluid px-0" data-ng-controller="MicrosoftOfficeLicenseConsumptionCtrl as consumptionCtrl">
+    <div data-ovh-alert="{{alerts.main}}"></div>
 
     <div class="alert alert-warning" role="alert"
          data-ng-if="consumptionCtrl.errorMessage">
@@ -6,22 +7,29 @@
         <strong data-ng-bind="consumptionCtrl.errorMessage"></strong>
     </div>
 
-    <div data-ng-if="!consumptionCtrl.errorMessage">
+    <div class="text-center" data-ng-if="consumptionCtrl.loaders.charts">
+        <oui-loader class="d-inline-block" size="l"></oui-loader>
+    </div>
+
+    <div data-ng-if="!consumptionCtrl.errorMessage && !consumptionCtrl.loaders.charts">
         <div class="oui-box form-inline mb-5">
-            <div class="form-group">
-                <label class="control-label" for="selectPeriod"
+            <div class="oui-field">
+                <label class="oui-field__label oui-label" for="selectPeriod"
                        data-i18n-static="microsoft_office_license_usage_period_label"></label>
-                <select class="form-control" name="datatype" id="selectPeriod"
-                        data-ng-change="consumptionCtrl.getStat()"
-                        data-ng-model="consumptionCtrl.selectedPeriod">
-                    <option data-ng-repeat="period in consumptionCtrl.periods"
-                            data-ng-bind="i18n['microsoft_office_license_usage_period_' + period.key]"
-                            value="{{period.key}}"></option>
-                </select>
+                <div class="oui-field__content">
+                    <div class="oui-select oui-select_inline mb-0">
+                        <select class="oui-select__input" name="datatype" id="selectPeriod"
+                                data-ng-change="consumptionCtrl.getStat()"
+                                data-ng-model="consumptionCtrl.selectedPeriod">
+                            <option data-ng-repeat="period in consumptionCtrl.periods"
+                                    data-ng-bind="i18n['microsoft_office_license_usage_period_' + period.key]"
+                                    value="{{period.key}}"></option>
+                        </select>
+                        <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="loader text-center" data-ng-if="consumptionCtrl.loaders.charts"></div>
 
         <div class="alert alert-info" role="alert"
              data-i18n-static="microsoft_office_license_empty_usage"

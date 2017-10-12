@@ -7,7 +7,9 @@
         <div data-wizard-step
              data-wizard-step-valid="!deleteUserCtrl.loaders.deleting">
 
-            <div class="loader text-center" data-ng-if="deleteUserCtrl.loaders.deleting"></div>
+            <div class="text-center" data-ng-if="deleteUserCtrl.loaders.deleting">
+                <oui-loader class="d-inline-block"></oui-loader>
+            </div>
 
             <div data-ng-if="!deleteUserCtrl.loaders.deleting">
                 <p data-ng-bind-html="tr('microsoft_office_license_detail_user_delete_confirm', [deleteUserCtrl.user.activationEmail])"></p>

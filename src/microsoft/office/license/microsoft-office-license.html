@@ -1,6 +1,8 @@
-<div data-ovh-alert="{{alerts.dashboard}}"></div>
+<div data-ovh-alert="{{alerts.page}}"></div>
 
-<div class="loader text-center" data-ng-if="MicrosoftOfficeLicenseCtrl.loaders.tenant"></div>
+<div class="text-center" data-ng-if="MicrosoftOfficeLicenseCtrl.loaders.tenant">
+    <oui-loader class="d-inline-block" size="l"></oui-loader>
+</div>
 
 <div data-ng-if="!MicrosoftOfficeLicenseCtrl.loaders.tenant">
     <div class="page-header">
@@ -25,7 +27,7 @@
             <div class="form-group my-4"
                  data-ng-show="MicrosoftOfficeLicenseCtrl.editMode">
                 <div class="input-group">
-                    <input type="text" class="form-control input-lg" id="license-group-name"
+                    <input type="text" class="form-control" id="license-group-name"
                            data-ng-model="MicrosoftOfficeLicenseCtrl.newDisplayName.value">
                     <div class="input-group-btn">
                         <button class="btn btn-success btn-lg" type="submit"
@@ -51,6 +53,7 @@
                   product="microsoftOfficeLicense"
                   tr="tr"></ovh-tabs>
         <div class="tab-content">
+            <div data-ovh-alert="{{alerts.tabs}}"></div>
             <div class="tab-pane active"
                  data-ng-include="'microsoft/office/license/' + toKebabCase(selectedTab) + '/' + selectedTab + '.html' || ''"></div>
         </div>

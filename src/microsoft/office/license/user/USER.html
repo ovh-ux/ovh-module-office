@@ -1,6 +1,8 @@
 <div class="container-fluid px-0" data-ng-controller="MicrosoftOfficeLicenseUsersCtrl as usersCtrl">
     <div class="row">
         <div class="col-md-9">
+            <div data-ovh-alert="{{alerts.main}}"></div>
+            
             <p>
                 <span class="fa fa-download mr-2" aria-hidden="true"></span>
                 <span data-ng-bind-html="tr('license_office_users_download_text')"></span>

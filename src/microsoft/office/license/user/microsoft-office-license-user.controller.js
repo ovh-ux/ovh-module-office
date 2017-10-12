@@ -63,7 +63,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
         return this.license.getUsers(this.currentLicense)
             .then((users) => { this.users = users; })
-            .catch((err) => this.Alerter.error(err))
+            .catch((err) => this.Alerter.error(err.message, this.$scope.alerts.tabs))
             .finally(() => {
                 if (_.isEmpty(this.users)) {
                     this.loaders.users = false;

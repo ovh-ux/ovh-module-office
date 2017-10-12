@@ -25,11 +25,11 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
             return this.licenseService.addUser(this.licenseId, this.user)
                 .then((task) => {
-                    this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_add_success"), this.$scope.alerts.dashboard);
+                    this.alerter.success(this.$scope.tr("microsoft_office_license_detail_user_add_success"), this.$scope.alerts.main);
                     return task;
                 })
                 .catch((err) => {
-                    this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_add_error"), err, this.$scope.alerts.dashboard);
+                    this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_detail_user_add_error"), err, this.$scope.alerts.main);
                     return err;
                 })
                 .finally(() => {

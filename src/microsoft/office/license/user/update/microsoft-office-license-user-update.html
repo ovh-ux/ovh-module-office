@@ -75,7 +75,9 @@
         <div data-wizard-step
              data-wizard-step-valid="!updateUserCtrl.loaders.userEdit">
 
-            <div class="loader text-center" data-ng-if="updateUserCtrl.loaders.userEdit"></div>
+            <div class="text-center" data-ng-if="updateUserCtrl.loaders.userEdit">
+                <oui-loader class="d-inline-block"></oui-loader>
+            </div>
 
             <div data-ng-if="!updateUserCtrl.loaders.userEdit">
                 <p data-i18n-static="microsoft_office_license_edit_user_confirm"></p>
