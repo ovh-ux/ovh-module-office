@@ -7,9 +7,7 @@
         <strong data-ng-bind="consumptionCtrl.errorMessage"></strong>
     </div>
 
-    <div class="text-center" data-ng-if="consumptionCtrl.loaders.charts">
-        <oui-loader inline="true" size="l"></oui-loader>
-    </div>
+    <oui-loader size="l" data-ng-if="consumptionCtrl.loaders.charts"></oui-loader>
 
     <div data-ng-if="!consumptionCtrl.errorMessage && !consumptionCtrl.loaders.charts">
         <div class="oui-box form-inline mb-5">

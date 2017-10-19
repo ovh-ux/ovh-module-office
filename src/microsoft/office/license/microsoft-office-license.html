@@ -1,8 +1,6 @@
 <div data-ovh-alert="{{alerts.page}}"></div>
 
-<div class="text-center" data-ng-if="MicrosoftOfficeLicenseCtrl.loaders.tenant">
-    <oui-loader inline="true" size="l"></oui-loader>
-</div>
+<oui-loader size="l" data-ng-if="MicrosoftOfficeLicenseCtrl.loaders.tenant"></oui-loader>
 
 <div data-ng-if="!MicrosoftOfficeLicenseCtrl.loaders.tenant">
     <div class="page-header">
