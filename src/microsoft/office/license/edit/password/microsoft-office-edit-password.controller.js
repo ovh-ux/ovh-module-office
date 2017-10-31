@@ -51,8 +51,8 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficePasswo
             }
 
             return this.licenseService.editPassword(this.licenseId, this.user.activationEmail, this.model)
-                .then(() => this.alerter.success(this.$scope.tr("microsoft_office_license_edit_password_success"), this.$scope.alerts.dashboard))
-                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_edit_password_error"), err, this.$scope.alerts.dashboard))
+                .then(() => this.alerter.success(this.$scope.tr("microsoft_office_license_edit_password_success"), this.$scope.alerts.main))
+                .catch((err) => this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_edit_password_error"), err, this.$scope.alerts.main))
                 .finally(() => {
                     this.loaders.edit = false;
                     this.$scope.resetAction();
