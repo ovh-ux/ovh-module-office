@@ -21,7 +21,9 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         };
         this.$scope.domainsDetails = [];
         this.$scope.alerts = {
-            dashboard: "microsoft_office_license_alert_dashboard"
+            page: "microsoft_office_license_alert_page",
+            tabs: "microsoft_office_license_alert_tabs",
+            main: "microsoft_office_license_alert_main"
         };
 
         this.user.getUrlOf("guides")
@@ -97,11 +99,11 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         tenant.displayName = this.newDisplayName.value;
         this.licenseService.edit(license, tenant)
             .then(() => {
-                this.alerter.success(this.$scope.tr("microsoft_office_license_edit_success"), this.$scope.alerts.dashboard);
+                this.alerter.success(this.$scope.tr("microsoft_office_license_edit_success"), this.$scope.alerts.tabs);
                 this.$rootScope.$broadcast("change.displayName", [this.$scope.currentLicense, this.newDisplayName.value]);
             })
             .catch((err) => {
-                this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_edit_error"), err, this.$scope.alerts.dashboard);
+                this.alerter.alertFromSWS(this.$scope.tr("microsoft_office_license_edit_error"), err, this.$scope.alerts.main);
                 this.license.tenant.displayName = oldDisplayName;
             })
             .finally(() => { this.editMode = false; });

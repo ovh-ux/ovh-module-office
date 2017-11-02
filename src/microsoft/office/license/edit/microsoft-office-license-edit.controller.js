@@ -19,12 +19,12 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
             return this.licenseService.edit(this.license, this.tenant)
                 .then((tenant) => {
-                    this.alerter.success(this.$scope.tr("microsoft_office_license_edit_success"), this.$scope.alerts.dashboard);
+                    this.alerter.success(this.$scope.tr("microsoft_office_license_edit_success"), this.$scope.alerts.main);
                     this.$rootScope.$broadcast("change.displayName", [this.license, this.tenant.displayName]);
                     return tenant;
                 })
                 .catch((err) => {
-                    this.alerter.alertFromSWS(this.tr("microsoft_office_license_edit_error"), this.$scope.alerts.dashboard);
+                    this.alerter.alertFromSWS(this.tr("microsoft_office_license_edit_error"), this.$scope.alerts.main);
                     return err;
                 })
                 .finally(() => {
