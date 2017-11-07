@@ -112,9 +112,15 @@
 
         <div class="col-md-3 mt-5 mt-lg-0">
             <div class="mb-5">
-                <button class="btn btn-block btn-default" type="button"
+                <button data-ng-if="MicrosoftOfficeLicenseCtrl.license.tenant.serviceType === 'payAsYouGo'"
+                        type="button" class="btn btn-block btn-default"
                         data-i18n-static="microsoft_office_license_user_add"
                         data-ng-click="setAction('user/add/microsoft-office-license-user-add', {'license': usersCtrl.currentLicense});">
+                </button>
+                <button data-ng-if="MicrosoftOfficeLicenseCtrl.license.tenant.serviceType === 'prepaid'"
+                        type="button" class="btn btn-block btn-default"
+                        data-i18n-static="microsoft_office_license_user_order"
+                        data-ng-click="setAction('user/order/microsoft-office-license-user-order', {'license': usersCtrl.currentLicense});">
                 </button>
             </div>
             <p class="mb-5"
