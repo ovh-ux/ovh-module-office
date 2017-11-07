@@ -75,8 +75,8 @@
                             </td>
 
                             <td class="text-center">
-                                <span class="fa fa-spinner fa-spin" aria-hidden="true"
-                                      data-ng-if="usersCtrl.loaders.userPoll[user.activationEmail]"></span>
+                                <oui-loader size="s" inline="true"
+                                            data-ng-if="usersCtrl.loaders.userPoll[user.activationEmail]"></oui-loader>
 
                                 <button class="btn btn-icon" type="button" title="{{user.activationEmail}} {{::i18n.table_manage_entry}}"
                                         data-ng-if="!usersCtrl.loaders.userPoll[user.activationEmail]"
@@ -112,7 +112,7 @@
 
         <div class="col-md-3 mt-5 mt-lg-0">
             <div class="mb-5">
-                <button type="button" class="btn btn-block btn-default"
+                <button class="btn btn-block btn-default" type="button"
                         data-i18n-static="microsoft_office_license_user_add"
                         data-ng-click="setAction('user/add/microsoft-office-license-user-add', {'license': usersCtrl.currentLicense});">
                 </button>
