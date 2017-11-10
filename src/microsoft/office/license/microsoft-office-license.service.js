@@ -1,13 +1,15 @@
 angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseService", class MicrosoftOfficeLicenseService {
 
-    constructor ($cacheFactory, $http, $q, constants, OvhHttp, Poll, translator) {
+    constructor ($cacheFactory, $http, $q, $window, constants, OvhHttp, Poll, translator, User) {
         this.$cacheFactory = $cacheFactory;
         this.$http = $http;
         this.$q = $q;
+        this.$window = $window;
         this.constants = constants;
         this.pollService = Poll;
         this.ovhHttp = OvhHttp;
         this.translator = translator;
+        this.User = User;
 
         this.basePath = "apiv6/license/office";
     }
@@ -239,5 +241,20 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
                 return stat;
             })
             .catch((err) => this.$q.reject(err.data));
+    }
+
+    /**
+     * Redirect to the express order page
+     * @param {String} licenseType [the type of office license to buy]
+     * @param {Number} number [the number of office licenses to buy]
+    */
+    gotToOrderPrepaidLicenses (licenseType, number) {
+        const answer = {
+
+        };
+
+        this.User.getUrlOfEndsWithSubsidiary("express_order").then((expressOrderUrl) => {
+            this.$window.open(`${expressOrderUrl}#/new/express/resume?products=${JSURL.stringify(answer)}`, "_blank");
+        });
     }
 });
