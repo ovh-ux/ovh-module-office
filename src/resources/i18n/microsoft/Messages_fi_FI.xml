@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Tila</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktivointisähköposti</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Lisenssit</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Lataa tiedot uudestaan</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">Ei käyttäjiä</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">Tapahtui virhe käyttäjää <b>{0}</b> poistettaessa</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">Käyttäjä poistetaan</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Poista käyttäjä</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Käyttäjä poistetaan heti vahvistuksen jälkeen.</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Koska Office 365 -tuotteidemme laskutus perustuu edellisen kuukauden kulutukseen, saat tätä tiliä koskevan viimeisen laskun</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Konfiguroimaton käyttäjä</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Lisää käyttäjä</translation>
 

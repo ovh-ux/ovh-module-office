@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Būsena</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktyvavimo el. laiškas</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licencijos</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Įkelti duomenis iš naujo</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">Nėra naudotojų</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">Įvyko klaida šalinant naudotoją <b>{0}</b></translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">Naudotojas šalinamas</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Naudotojo trynimas</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Naudotojas bus pašalintas nedelsiant po patvirtinimo</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Sąskaitos už Office 365 produktus formuojamos remiantis praėjusio mėnesio suvartojimo duomenimis, jūs gausite paskutinę sąskaitą šiai paskyrai</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Vartotojas nesukonfigūruotas</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Pridėti naudotoją</translation>
 
