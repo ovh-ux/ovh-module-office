@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Status</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktivierungs-E-Mail</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Lizenzen</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Daten neu laden</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">Keine Benutzer</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">Es ist ein Fehler bei der Löschung folgenden Benutzers aufgetreten:</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">Benutzer wird gelöscht</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Löschung eines Benutzers</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Nach der Bestätigung wird der Benutzer automatisch gelöscht</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Da unsere Office 365 Produkte immer nach dem vergangenen Monat abgerechnet werden, werden Sie noch eine letzte Rechnung zu diesem Account erhalten</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Benutzer nicht konfiguriert</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Einen Benutzer hinzufügen</translation>
 

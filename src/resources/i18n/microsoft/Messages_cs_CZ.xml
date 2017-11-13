@@ -5,7 +5,7 @@
    <translation id="microsoft_office_license_officeProPlusofficeProPlus" qtlid="253231">Office Pro Plus</translation>
 
    <translation id="microsoft_office_license_detail_firstname" qtlid="23323">Jméno</translation>
-   <translation id="microsoft_office_license_detail_lastname" qtlid="3818">Jméno</translation>
+   <translation id="microsoft_office_license_detail_lastname" qtlid="3818">Příjmení</translation>
    <translation id="microsoft_office_license_detail_zipcode" qtlid="236268">PSČ</translation>
    <translation id="microsoft_office_license_detail_city" qtlid="33310">Město</translation>
    <translation id="microsoft_office_license_detail_address" qtlid="30430">Adresa</translation>
@@ -26,10 +26,11 @@
    <translation id="microsoft_office_license_peakcount" qtlid="253556">Maximální počet licencí denně</translation>
 
    <translation id="microsoft_office_license_detail_user_firstname" qtlid="23323">Jméno</translation>
-   <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Jméno</translation>
+   <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Příjmení</translation>
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Stav</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktivační e-mail</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licence</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Znovu načíst data</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">Žádný uživatel</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">Při mazání uživatele došlo k chybě</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">Odstraňování uživatele</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Smazat uživatele</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Uživatel bude po potvrzení okamžitě odstraněn</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Jelikož je fakturace produktů Office 365 založena na spotřebě za uplynulý měsíc, bude Vám v rámci tohoto účtu vystavena ještě jedna faktura.</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Uživatel nenakonfigurován</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Přidat uživatele</translation>
 
@@ -73,7 +75,7 @@
    <translation id="microsoft_office_license_add_user_price_warning" qtlid="363388">Výše Vaší další faktury se odvíjí od počtu licencí aktivovaných v současném měsíci.</translation>
    <translation id="microsoft_office_license_add_user_domain_label" qtlid="264888">Domain Office</translation>
    <translation id="microsoft_office_license_add_user_firstName_label" qtlid="23323">Jméno</translation>
-   <translation id="microsoft_office_license_add_user_lastName_label" qtlid="3818">Jméno</translation>
+   <translation id="microsoft_office_license_add_user_lastName_label" qtlid="3818">Příjmení</translation>
    <translation id="microsoft_office_license_add_user_license_label" qtlid="264901">Použitá licence</translation>
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Uživatelské jméno</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Tato pole jsou povinná</translation>

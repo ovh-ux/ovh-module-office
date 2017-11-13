@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Status</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">E-mail aktywacyjny</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licencje</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Załaduj ponownie dane</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">Brak użytkownika</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">Wystąpił błąd podczas usuwania użytkownika</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">Trwa usuwanie użytkownika</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Usunięcie użytkownika</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Użytkownik zostanie usunięty natychmiast po potwierdzeniu.</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">W związku z tym, że płatności za produkty Office 365 opierają się na zużyciu z poprzedniego miesiąca, otrzymasz ostatnią fakturę dla tego konta.</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Użytkownik nieskonfigurowany</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Dodaj użytkownika</translation>
 

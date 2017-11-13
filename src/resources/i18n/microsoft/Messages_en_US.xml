@@ -9,7 +9,7 @@
    <translation id="microsoft_office_license_detail_zipcode" qtlid="236268">Zip code</translation>
    <translation id="microsoft_office_license_detail_city" qtlid="33310">City</translation>
    <translation id="microsoft_office_license_detail_address" qtlid="30430">Address</translation>
-   <translation id="microsoft_office_license_detail_phone" qtlid="34174">Telephone</translation>
+   <translation id="microsoft_office_license_detail_phone" qtlid="34174">Phone</translation>
    <translation id="microsoft_office_license_detail_status" qtlid="26443">Status</translation>
    <translation id="microsoft_office_license_detail_displayName" qtlid="264771">Display name</translation>
    <translation id="microsoft_office_license_generals_informations_title" qtlid="27115">General information</translation>
@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Status</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Activation email</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licenses</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Reload data</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">No user</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">An error occurred when deleting the <b>{0}</b> user</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">User is being deleted</translation>
@@ -37,6 +38,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Delete a user</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">The user will be deleted automatically after confirmation</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">As our Office 365 products are billed at the end of the month, for services used during the previous month, you will receive one last invoice for this account </translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">User not configured</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Add user</translation>
 
