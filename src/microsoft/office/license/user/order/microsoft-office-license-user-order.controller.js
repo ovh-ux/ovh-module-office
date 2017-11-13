@@ -16,7 +16,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         };
 
         this.license = null;
-        this.number = null;
+        this.number = 1;
 
         this.$scope.orderUser = () => this.orderUser();
 
