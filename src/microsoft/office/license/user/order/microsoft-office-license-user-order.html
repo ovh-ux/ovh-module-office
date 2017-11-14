@@ -29,7 +29,7 @@
                         <div class="oui-select">
                             <select class="oui-select__input" id="license" name="license" required
                                     data-ng-model="orderUserCtrl.license"
-                                    data-ng-options="licenseType as tr('microsoft_office_license_officeProPlus'+licenseType) for licenseType in orderUserCtrl.licenseEnum track by licenseType">
+                                    data-ng-options="licenseType as tr('microsoft_office_license_'+licenseType) for licenseType in orderUserCtrl.licenseEnum track by licenseType">
                                    <option value="" disabled
                                            data-i18n-static="microsoft_office_license_order_user_license_none"></option>
                             </select>
@@ -52,7 +52,7 @@
             </dl>
             <dl class="dl-horizontal dl-lg">
                 <dt data-i18n-static="microsoft_office_license_order_user_license_label"></dt>
-                <dd data-ng-bind="orderUserCtrl.license"></dd>
+                <dd data-ng-bind="tr('microsoft_office_license_'+orderUserCtrl.license)"></dd>
             </dl>
             <div class="alert alert-info" role="alert"
                  data-i18n-static="microsoft_office_license_order_user_price_warning">

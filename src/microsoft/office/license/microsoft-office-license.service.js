@@ -248,10 +248,20 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
      * @param {String} licenseType [the type of office license to buy]
      * @param {Number} number [the number of office licenses to buy]
     */
-    gotToOrderPrepaidLicenses (licenseType, number) {
-        const answer = {
-
-        };
+    gotToOrderPrepaidLicenses (licenseId, licenseType, number) {
+        const answer = [
+            {
+                planCode: "office-tenant",
+                productId: "office365Prepaid",
+                serviceName: licenseId,
+                option: [
+                    {
+                        planCode: licenseType,
+                        quantity: number
+                    }
+                ]
+            }
+        ];
 
         this.User.getUrlOfEndsWithSubsidiary("express_order").then((expressOrderUrl) => {
             this.$window.open(`${expressOrderUrl}#/new/express/resume?products=${JSURL.stringify(answer)}`, "_blank");
