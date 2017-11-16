@@ -251,15 +251,10 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
     gotToOrderPrepaidLicenses (licenseId, licenseType, number) {
         const answer = [
             {
-                planCode: "office-tenant",
+                planCode: licenseType,
                 productId: "office365Prepaid",
                 serviceName: licenseId,
-                option: [
-                    {
-                        planCode: licenseType,
-                        quantity: number
-                    }
-                ]
+                quantity: number
             }
         ];
 
