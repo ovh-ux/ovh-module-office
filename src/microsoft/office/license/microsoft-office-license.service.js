@@ -65,6 +65,12 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
         });
     }
 
+    getAvailableOptions (licenseId) {
+        return this.OvhHttp.get(`/order/cartServiceOption/office365Prepaid/${licenseId}`, {
+            rootPath: "apiv6"
+        });
+    }
+
     /**
      * Get array of user id
      * @param  {string} licenseId [description]

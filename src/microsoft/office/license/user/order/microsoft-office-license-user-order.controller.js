@@ -6,8 +6,6 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         this.$rootScope = $rootScope;
         this.$scope = $scope;
         this.OvhHttp = OvhHttp;
-
-        this.licenseId = this.$scope.currentActionData.license;
     }
 
     $onInit () {
@@ -16,8 +14,9 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             userOrder: false
         };
 
+        this.licenseId = this.$scope.currentActionData.license;
         this.license = null;
-        this.number = 1;
+        this.numberOfLicenses = 1;
 
         this.$scope.orderUser = () => this.orderUser();
 
@@ -26,18 +25,17 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
     orderUser () {
         this.loaders.userOrder = true;
-        this.licenseService.gotToOrderPrepaidLicenses(this.licenseId, this.license, this.number);
+        this.licenseService.gotToOrderPrepaidLicenses(this.licenseId, this.license, this.numberOfLicenses);
     }
 
     getLicenses (serviceName) {
         this.loaders.licenseEnum = true;
 
-        return this.OvhHttp.get(`/order/cartServiceOption/office365Prepaid/${serviceName}`, {
-            rootPath: "apiv6"
-        }).then((licenses) => {
-            this.licenseEnum = _.map(licenses, "planCode");
-        }).finally(() => {
-            this.loaders.licenseEnum = false;
-        });
+        return this.licenseService.getAvailableOptions(serviceName)
+            .then((licenses) => {
+                this.licenseEnum = _.map(licenses, "planCode");
+            }).finally(() => {
+                this.loaders.licenseEnum = false;
+            });
     }
 });
