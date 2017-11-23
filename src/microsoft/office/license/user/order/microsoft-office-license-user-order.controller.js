@@ -26,6 +26,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
     orderUser () {
         this.loaders.userOrder = true;
         this.licenseService.gotToOrderPrepaidLicenses(this.licenseId, this.license, this.numberOfLicenses);
+        this.$scope.resetAction();
     }
 
     getLicenses (serviceName) {
