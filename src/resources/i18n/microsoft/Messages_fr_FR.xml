@@ -92,6 +92,7 @@
    <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
    <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
    <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
+   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Période :</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">Le mois en cours</translation>
