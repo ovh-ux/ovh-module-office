@@ -43,6 +43,7 @@
    <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Gebruiker niet geconfigureerd</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Een gebruiker toevoegen</translation>
+   <translation id="microsoft_office_license_user_order">Commander plus de licences</translation>
 
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Domeinnaam</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">TXT-invoer</translation>
@@ -82,11 +83,16 @@
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Login</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Dit veld is verplicht</translation>
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">De volgende gebruiker zal worden toegevoegd</translation>
-   <translation id="microsoft_office_license_add_user_license_none" qtlid="264927">Selecteer het te verbruiken type licentie</translation>
+   <translation id="microsoft_office_license_add_user_license_none">Sélectionnez une licence</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Er is een fout opgetreden tijdens het toevoegen van de gebruiker</translation>
    <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">De login moet uit minstens 3 tekens bestaan</translation>
    <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">De log-in moet uit meer dan 20 tekens bestaan</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Velden gemarkeerd met een {0} zijn verplicht. </translation>
+
+   <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
+   <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
+   <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
+   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Periode:</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">De huidige maand</translation>

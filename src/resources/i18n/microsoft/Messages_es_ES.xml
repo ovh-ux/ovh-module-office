@@ -43,6 +43,7 @@
    <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Usuario no configurado</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Añadir un usuario </translation>
+   <translation id="microsoft_office_license_user_order">Commander plus de licences</translation>
 
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Dominio</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Registro TXT</translation>
@@ -82,11 +83,16 @@
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Usuario</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Este campo es obligatorio.</translation>
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">Se va a añadir el siguiente usuario:</translation>
-   <translation id="microsoft_office_license_add_user_license_none" qtlid="264927">Seleccione el tipo de licencia que desea utilizar.</translation>
+   <translation id="microsoft_office_license_add_user_license_none">Sélectionnez une licence</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Se ha producido un error al añadir al usuario. </translation>
    <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">El nombre de usuario debe tener un mínimo de 3 caracteres.</translation>
    <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">El nombre de usuario debe tener un máximo de 20 caracteres.</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Los campos marcados con un {0} son obligatorios.</translation>
+
+   <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
+   <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
+   <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
+   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Período:</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">El mes en curso</translation>
