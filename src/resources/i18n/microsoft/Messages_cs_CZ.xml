@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
 
-   <translation id="microsoft_office_license_officeProPlusofficeBusiness" qtlid="253218">Office Business</translation>
-   <translation id="microsoft_office_license_officeProPlusofficeProPlus" qtlid="253231">Office Pro Plus</translation>
+   <translation id="microsoft_office_license_office-business-pp" qtlid="253218">Office Business</translation>
+   <translation id="microsoft_office_license_office-proplus-pp" qtlid="253231">Office Pro Plus</translation>
+   <translation id="microsoft_office_license_officeBusiness" qtlid="253218">Office Business</translation>
+   <translation id="microsoft_office_license_officeProPlus" qtlid="253231">Office Pro Plus</translation>
 
    <translation id="microsoft_office_license_detail_firstname" qtlid="23323">Jméno</translation>
    <translation id="microsoft_office_license_detail_lastname" qtlid="3818">Jméno</translation>

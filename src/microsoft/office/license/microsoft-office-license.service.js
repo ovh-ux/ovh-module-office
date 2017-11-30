@@ -1,13 +1,15 @@
 angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseService", class MicrosoftOfficeLicenseService {
 
-    constructor ($cacheFactory, $http, $q, constants, OvhHttp, Poll, translator) {
+    constructor ($cacheFactory, $http, $q, $window, constants, OvhHttp, Poll, translator, User) {
         this.$cacheFactory = $cacheFactory;
         this.$http = $http;
         this.$q = $q;
+        this.$window = $window;
         this.constants = constants;
         this.pollService = Poll;
         this.ovhHttp = OvhHttp;
         this.translator = translator;
+        this.User = User;
 
         this.basePath = "apiv6/license/office";
     }
@@ -60,6 +62,12 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
                 serviceName: licenseId
             },
             cache: "office.license.serviceinfos"
+        });
+    }
+
+    getAvailableOptions (licenseId) {
+        return this.ovhHttp.get(`/order/cartServiceOption/office365Prepaid/${licenseId}`, {
+            rootPath: "apiv6"
         });
     }
 
@@ -239,5 +247,25 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
                 return stat;
             })
             .catch((err) => this.$q.reject(err.data));
+    }
+
+    /**
+     * Redirect to the express order page
+     * @param {String} licenseType [the type of office license to buy]
+     * @param {Number} number [the number of office licenses to buy]
+    */
+    gotToOrderPrepaidLicenses (licenseId, licenseType, number) {
+        const answer = [
+            {
+                planCode: licenseType,
+                productId: "office365Prepaid",
+                serviceName: licenseId,
+                quantity: number
+            }
+        ];
+
+        this.User.getUrlOfEndsWithSubsidiary("express_order").then((expressOrderUrl) => {
+            this.$window.open(`${expressOrderUrl}#/new/express/resume?products=${JSURL.stringify(answer)}`, "_blank");
+        });
     }
 });

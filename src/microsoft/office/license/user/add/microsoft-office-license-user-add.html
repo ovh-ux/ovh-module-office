@@ -76,7 +76,7 @@
                         <div class="oui-select">
                             <select class="oui-select__input" id="licence" name="licence" required
                                     data-ng-model="addUserCtrl.user.licence"
-                                    data-ng-options="licenseType as tr('microsoft_office_license_officeProPlus'+licenseType) for licenseType in addUserCtrl.licenseEnum track by licenseType">
+                                    data-ng-options="licenseType as tr('microsoft_office_license_' + licenseType) for licenseType in addUserCtrl.licenseEnum track by licenseType">
                                    <option value="" disabled
                                            data-i18n-static="microsoft_office_license_add_user_license_none"></option>
                             </select>
