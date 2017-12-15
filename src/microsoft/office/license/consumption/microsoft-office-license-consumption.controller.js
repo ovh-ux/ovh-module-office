@@ -147,6 +147,10 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
                     gridLines: {
                         drawBorder: true,
                         display: true
+                    },
+                    ticks: {
+                        min: 0,
+                        stepSize: 1
                     }
                 }],
                 xAxes: [{
