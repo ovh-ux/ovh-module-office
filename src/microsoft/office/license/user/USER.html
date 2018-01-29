@@ -75,8 +75,7 @@
                             </td>
 
                             <td class="text-center">
-                                <oui-loader size="s" inline="true"
-                                            data-ng-if="usersCtrl.loaders.userPoll[user.activationEmail]"></oui-loader>
+                                <oui-spinner data-size="s" data-ng-if="usersCtrl.loaders.userPoll[user.activationEmail]"></oui-spinner>
 
                                 <button class="btn btn-icon" type="button" title="{{user.activationEmail}} {{::i18n.table_manage_entry}}"
                                         data-ng-if="!usersCtrl.loaders.userPoll[user.activationEmail]"
