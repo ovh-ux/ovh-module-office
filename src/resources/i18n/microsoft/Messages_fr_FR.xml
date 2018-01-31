@@ -40,7 +40,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Suppression d'un utilisateur</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">L'utilisateur sera supprimé immédiatement après confirmation</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">La facturation de nos produits Office 365 étant basée sur la consommation du mois précédent, vous recevrez une dernière facture pour ce compte</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Utilisateur non configuré</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure">Non configuré</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Ajouter un utilisateur</translation>
    <translation id="microsoft_office_license_user_order" qtlid="446598">Commander plus de licences</translation>
