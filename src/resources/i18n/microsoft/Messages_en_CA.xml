@@ -32,6 +32,7 @@
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Status</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Activation email</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licences</translation>
+   <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Reload data</translation>
    <translation id="microsoft_office_license_detail_user_no_users" qtlid="215741">No user</translation>
    <translation id="microsoft_office_license_detail_user_delete_error" qtlid="147824">An error occurred when deleting the <b>{0}</b> user</translation>
    <translation id="microsoft_office_license_detail_user_delete_success" qtlid="264810">User is being deleted</translation>
@@ -39,8 +40,10 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Delete a user</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">The user will be deleted automatically after confirmation</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">As our Office 365 products are billed at the end of the month, for services used during the previous month, you will receive one last invoice for this account </translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">User not configured</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Add user</translation>
+   <translation id="microsoft_office_license_user_order">Commander plus de licences</translation>
 
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Domain name</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Between txt</translation>
@@ -80,11 +83,16 @@
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Login</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">This field is mandatory</translation>
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">The following user will be added</translation>
-   <translation id="microsoft_office_license_add_user_license_none" qtlid="264927">Select a licence type </translation>
+   <translation id="microsoft_office_license_add_user_license_none">Sélectionnez une licence</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">An error occured when a user was being added </translation>
    <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">The username must be at least 3 characters long</translation>
    <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">The username must be fewer than 20 characters long</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Fields marked with a {0} are mandatory. </translation>
+
+   <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
+   <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
+   <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
+   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Period:</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">The current month </translation>

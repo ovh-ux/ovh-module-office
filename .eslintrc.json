@@ -5,6 +5,7 @@
     },
     "globals": {
         "module": true,
-        "require": true
+        "require": true,
+        "JSURL": true
     }
 }
