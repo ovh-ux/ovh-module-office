@@ -2,7 +2,6 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
     constructor (MicrosoftOfficeLicenseService, $stateParams, $scope, $timeout, Alerter) {
         this.license = MicrosoftOfficeLicenseService;
-        this.$stateParams = $stateParams;
         this.currentLicense = $stateParams.serviceName;
         this.$scope = $scope;
         this.$timeout = $timeout;
@@ -17,17 +16,22 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         this.getUserIds();
     }
 
-    transformItem (item) {
-        return this.license.getUserDetails(this.$scope.currentLicense, item)
+    transformItem ({ id }) {
+        return this.license.getUserDetails(this.$scope.currentLicense, id)
             .then((details) => {
                 if (details.status !== "ok") {
                     details.isLoading = true;
-                    this.license.pollUserDetails(this.$scope.currentLicense, item, this.$scope)
+                    this.license.pollUserDetails(this.$scope.currentLicense, id, this.$scope)
                         .then(() => this.delayedGetUsers())
                         .finally(() => { details.isLoading = false; });
                 }
                 return details;
-            });
+            })
+            .catch(() => ({
+                id,
+                activationEmail: id,
+                status: "error"
+            }));
     }
 
 

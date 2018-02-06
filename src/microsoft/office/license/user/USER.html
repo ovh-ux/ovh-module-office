@@ -11,7 +11,7 @@
             <p class="font-weight-bold" data-i18n-static="license_office_users_download_id"></p>
 
             <oui-datagrid data-rows="usersCtrl.users"
-                          data-row-loader="usersCtrl.transformItem($row.id)">
+                          data-row-loader="usersCtrl.transformItem($row)">
                 <oui-column data-title="tr('microsoft_office_license_detail_user_firstname')" data-property="firstName"></oui-column>
                 <oui-column data-title="tr('microsoft_office_license_detail_user_lastname')" data-property="lastName"></oui-column>
                 <oui-column data-title="tr('microsoft_office_license_detail_user_activationEmail')" data-property="activationEmail"></oui-column>
@@ -20,12 +20,13 @@
                 </oui-column>
                 <oui-column data-title="tr('microsoft_office_license_detail_user_status')" data-property="">
                     <span class="label"
-                          data-ng-if="!$row.isVirtual"
+                          data-ng-if="!$row.isVirtual && $row.status"
                           data-ng-bind="tr('microsoft_office_license_user_status_' + $row.status)"
                           data-ng-class="{
                             'label-success': $row.status === 'ok',
-                            'label-danger': $row.status === 'deleting',
-                            'label-info': $row.status === 'creating'}"></span>
+                            'label-danger': $row.status === 'deleting' || $row.status === 'error',
+                            'label-info': $row.status === 'creating'}">
+                    </span>
                     <span class="label label-info"
                           data-ng-if="$row.isVirtual"
                           data-i18n-static="microsoft_office_license_detail_user_not_configure">
