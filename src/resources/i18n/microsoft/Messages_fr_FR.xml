@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_firstname" qtlid="23323">Prénom</translation>
    <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Nom</translation>
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Statut</translation>
+   <translation id="microsoft_office_license_detail_user_error" qtlid="226423">Une erreur est survenue :</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Email d'activation</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licences</translation>
    <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Recharger les données</translation>
@@ -40,7 +41,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Suppression d'un utilisateur</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">L'utilisateur sera supprimé immédiatement après confirmation</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">La facturation de nos produits Office 365 étant basée sur la consommation du mois précédent, vous recevrez une dernière facture pour ce compte</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Utilisateur non configuré</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure">Non configuré</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Ajouter un utilisateur</translation>
    <translation id="microsoft_office_license_user_order" qtlid="446598">Commander plus de licences</translation>
@@ -51,6 +52,7 @@
    <translation id="microsoft_office_license_user_status_creating" qtlid="26227">En création</translation>
    <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">En suppression</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Créé</translation>
+   <translation id="microsoft_office_license_user_status_error" qtlid="26407">Erreur</translation>
    <translation id="microsoft_office_license_user_change_password" qtlid="80394">Changer le mot de passe</translation>
    <translation id="microsoft_office_license_user_update" qtlid="404512">Editer le compte</translation>
    <translation id="microsoft_office_license_user_delete" qtlid="150294">Supprimer le compte</translation>

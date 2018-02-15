@@ -2,72 +2,48 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
     constructor (MicrosoftOfficeLicenseService, $stateParams, $scope, $timeout, Alerter) {
         this.license = MicrosoftOfficeLicenseService;
-        this.$stateParams = $stateParams;
+        this.currentLicense = $stateParams.serviceName;
         this.$scope = $scope;
         this.$timeout = $timeout;
         this.Alerter = Alerter;
-
-        this.delayedGetUser = () => this.$timeout(() => {
-            this.getUsersId();
-        }, 250);
     }
 
     $onInit () {
-        this.currentLicense = this.$stateParams.serviceName;
+        this.$scope.$on("microsoft.office.license.user.add", () => this.delayedGetUsers());
+        this.$scope.$on("microsoft.office.license.user.edit", () => this.delayedGetUsers());
+        this.$scope.$on("microsoft.office.license.user.delete", () => this.delayedGetUsers());
 
-        this.usersDetails = [];
-        this.loaders = {
-            users: false,
-            userPoll: {}
-        };
-
-        this.$scope.$on("microsoft.office.license.user.add", this.delayedGetUser);
-        this.$scope.$on("microsoft.office.license.user.edit", this.delayedGetUser);
-        this.$scope.$on("microsoft.office.license.user.delete", this.delayedGetUser);
-
-        this.getUsersId();
+        this.getUserIds();
     }
 
-    transformItem (item) {
-        return this.license.getUserDetails(this.$scope.currentLicense, item)
+    transformItem ({ id }) {
+        return this.license.getUserDetails(this.$scope.currentLicense, id)
             .then((details) => {
                 if (details.status !== "ok") {
-                    this.loaders.userPoll[item] = true;
-
-                    this.license.pollUserDetails(this.$scope.currentLicense, item, this.$scope)
-                        .then(() => {
-                            this.loaders.userPoll.item = false;
-                            return this.delayedGetUser();
-                        })
-                        .catch((err) => {
-                            this.loaders.userPoll.item = false;
-                            return err;
-                        });
+                    details.isLoading = true;
+                    this.license.pollUserDetails(this.$scope.currentLicense, id, this.$scope)
+                        .then(() => this.delayedGetUsers())
+                        .finally(() => { details.isLoading = false; });
                 }
                 return details;
             })
-            .catch((err) => {
-                this.loaders.userPoll.item = false;
-                return err;
-            });
-    }
-
-    onTransformItemDone () {
-        this.loaders.users = false;
+            .catch(() => ({
+                id,
+                activationEmail: id,
+                status: "error"
+            }));
     }
 
 
-    getUsersId () {
-        this.loaders.users = true;
+    getUserIds () {
         this.users = null;
 
         return this.license.getUsers(this.currentLicense)
-            .then((users) => { this.users = users; })
-            .catch((err) => this.Alerter.error(err.message, this.$scope.alerts.tabs))
-            .finally(() => {
-                if (_.isEmpty(this.users)) {
-                    this.loaders.users = false;
-                }
-            });
+            .then((users) => { this.users = users.map((id) => ({ id })); })
+            .catch((err) => this.Alerter.error(err.message, this.$scope.alerts.tabs));
+    }
+
+    delayedGetUsers () {
+        return this.$timeout(() => this.getUserIds(), 250);
     }
 });
