@@ -14,6 +14,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             userEdit: false
         };
 
+        this.conditions = this.microsoftOfficeLicenseService.constructor.getLoginConditions();
         this.user = angular.copy(this.$scope.currentActionData.user);
 
         if (!_.isEmpty(this.user.activationEmail)) {

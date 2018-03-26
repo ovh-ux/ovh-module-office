@@ -268,4 +268,11 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
             this.$window.open(`${expressOrderUrl}#/new/express/resume?products=${JSURL.stringify(answer)}`, "_blank");
         });
     }
+
+    static getLoginConditions () {
+        return {
+            minLength: 3,
+            maxLength: 20
+        };
+    }
 });
