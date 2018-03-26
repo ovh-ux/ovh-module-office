@@ -8,8 +8,6 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
     }
 
     $onInit () {
-        this.loginPattern = /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/;
-
         this.loaders = {
             userEdit: false
         };

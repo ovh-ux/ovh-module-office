@@ -272,7 +272,8 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
     static getLoginConditions () {
         return {
             minLength: 3,
-            maxLength: 20
+            maxLength: 20,
+            loginPattern: /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/
         };
     }
 });
