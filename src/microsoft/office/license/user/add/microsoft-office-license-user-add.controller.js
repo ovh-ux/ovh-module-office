@@ -18,7 +18,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             licenseEnum: false,
             userAdd: false
         };
-        this.validationLoginPattern = /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/;
+        this.conditions = this.licenseService.constructor.getLoginConditions();
 
         this.$scope.addUser = () => {
             this.loaders.userAdd = true;

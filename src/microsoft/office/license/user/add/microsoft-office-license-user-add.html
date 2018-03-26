@@ -47,10 +47,10 @@
                            data-i18n-static="microsoft_office_license_add_user_login_label"></label>
                     <div class="col-md-6">
                         <input type="text" class="form-control" id="login" name="login" required
-                               data-ng-minLength="3"
-                               data-ng-maxLength="20"
+                               data-ng-minLength="addUserCtrl.conditions.minLength"
+                               data-ng-maxLength="addUserCtrl.conditions.maxLength"
                                data-ng-model="addUserCtrl.user.login"
-                               data-ng-pattern="validationLoginPattern"
+                               data-ng-pattern="addUserCtrl.conditions.loginPattern"
                                data-ng-trim="true">
                         <div data-ng-if="microsoftOfficeLicenseAddUserForm.login.$dirty">
                             <small class="help-block"
@@ -58,11 +58,11 @@
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.required">
                             </small>
                             <small class="help-block"
-                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_minlength',[3])"
+                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_minlength',[addUserCtrl.conditions.minLength])"
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.minlength">
                             </small>
                             <small class="help-block"
-                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_maxlength', [20])"
+                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_maxlength', [addUserCtrl.conditions.maxLength])"
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.maxlength">
                             </small>
                         </div>
