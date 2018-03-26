@@ -58,11 +58,11 @@
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.required">
                             </small>
                             <small class="help-block"
-                                   data-i18n-static="microsoft_office_license_add_user_login_minlength"
+                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_minlength',[3])"
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.minlength">
                             </small>
                             <small class="help-block"
-                                   data-i18n-static="microsoft_office_license_add_user_login_maxlength"
+                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_maxlength', [20])"
                                    data-ng-if="microsoftOfficeLicenseAddUserForm.login.$error.maxlength">
                             </small>
                         </div>

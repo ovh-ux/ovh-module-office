@@ -48,8 +48,8 @@
                            data-i18n-static="microsoft_office_license_add_user_login_label"></label>
                     <div class="col-md-6">
                         <input type="text" class="form-control" id="login" name="login" required
-                               data-ng-minLength="3"
-                               data-ng-maxLength="20"
+                               data-ng-minLength="updateUserCtrl.conditions.minLength"
+                               data-ng-maxLength="updateUserCtrl.conditions.maxLength"
                                data-ng-model="updateUserCtrl.user.login"
                                data-ng-pattern="updateUserCtrl.loginPattern"
                                data-ng-trim="true">
@@ -59,11 +59,11 @@
                                    data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.required">
                             </small>
                             <small class="help-block"
-                                   data-i18n-static="microsoft_office_license_add_user_login_minlength"
+                                   data-ng-bind-html="tr('microsoft_office_license_add_user_login_minlength', [updateUserCtrl.conditions.minLength])"
                                    data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.minlength">
                             </small>
                             <small class="help-block"
-                                   data-i18n-static="microsoft_office_license_add_user_login_maxlength"
+                                   data-ng-bind-html="tr(microsoft_office_license_add_user_login_maxlength, [updateUserCtrl.conditions.maxLength])"
                                    data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.maxlength">
                             </small>
                         </div>
@@ -72,7 +72,6 @@
 
                 <div class="alert alert-info mb-5" role="alert"
                      data-ng-bind-html="tr('microsoft_office_license_add_user_login_conditions',[updateUserCtrl.conditions.minLength,updateUserCtrl.conditions.maxLength])">
-
                 </div>
             </form>
         </div>
