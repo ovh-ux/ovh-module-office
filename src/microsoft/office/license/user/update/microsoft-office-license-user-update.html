@@ -42,8 +42,7 @@
 
                 <div class="form-group"
                      data-ng-class="{
-                         'has-error': microsoftOfficeLicenseUserUpdateForm.login.$dirty && microsoftOfficeLicenseUserUpdateForm.login.$invalid,
-                         'has-success': microsoftOfficeLicenseUserUpdateForm.login.$dirty && microsoftOfficeLicenseUserUpdateForm.login.$valid}">
+                         'has-error': microsoftOfficeLicenseUserUpdateForm.login.$dirty && microsoftOfficeLicenseUserUpdateForm.login.$invalid}">
                     <label class="control-label col-md-4 required" for="login"
                            data-i18n-static="microsoft_office_license_add_user_login_label"></label>
                     <div class="col-md-6">
@@ -51,6 +50,7 @@
                                data-ng-minLength="updateUserCtrl.conditions.minLength"
                                data-ng-maxLength="updateUserCtrl.conditions.maxLength"
                                data-ng-model="updateUserCtrl.user.login"
+                               data-ng-model-options="{updateOn: 'blur'}"
                                data-ng-pattern="updateUserCtrl.conditions.loginPattern"
                                data-ng-trim="true">
                         <div data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$dirty">
