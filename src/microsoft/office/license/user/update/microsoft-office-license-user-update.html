@@ -53,18 +53,23 @@
                                data-ng-model-options="{updateOn: 'blur'}"
                                data-ng-pattern="updateUserCtrl.conditions.loginPattern"
                                data-ng-trim="true">
-                        <div data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$dirty">
+                        <div data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$dirty"
+                             data-ng-messages="microsoftOfficeLicenseUserUpdateForm.login.$error">
                             <small class="help-block"
                                    data-i18n-static="microsoft_office_license_add_user_required"
-                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.required">
+                                   data-ng-message="required">
                             </small>
                             <small class="help-block"
                                    data-ng-bind-html="tr('microsoft_office_license_add_user_login_minlength', [updateUserCtrl.conditions.minLength])"
-                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.minlength">
+                                   data-ng-message="minlength">
                             </small>
                             <small class="help-block"
                                    data-ng-bind-html="tr('microsoft_office_license_add_user_login_maxlength', [updateUserCtrl.conditions.maxLength])"
-                                   data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$error.maxlength">
+                                   data-ng-message="maxlength">
+                            </small>
+                            <small class="help-block"
+                                   data-i18n-static="microsoft_office_license_add_user_login_invalid_pattern"
+                                   data-ng-message="pattern">
                             </small>
                         </div>
                     </div>
