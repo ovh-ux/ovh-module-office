@@ -19,6 +19,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             userAdd: false
         };
         this.conditions = this.licenseService.constructor.getLoginConditions();
+        this.conditionsMessage = this.licenseService.getLoginConditionsMessage();
 
         this.$scope.addUser = () => {
             this.loaders.userAdd = true;

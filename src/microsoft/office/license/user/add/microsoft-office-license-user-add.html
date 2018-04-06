@@ -46,12 +46,20 @@
                     <label class="control-label col-md-4 required" for="login"
                            data-i18n-static="microsoft_office_license_add_user_login_label"></label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="login" name="login" required
-                               data-ng-minLength="addUserCtrl.conditions.minLength"
-                               data-ng-maxLength="addUserCtrl.conditions.maxLength"
-                               data-ng-model="addUserCtrl.user.login"
-                               data-ng-pattern="addUserCtrl.conditions.loginPattern"
-                               data-ng-trim="true">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="login" name="login" required
+                                   data-ng-minLength="addUserCtrl.conditions.minLength"
+                                   data-ng-maxLength="addUserCtrl.conditions.maxLength"
+                                   data-ng-model="addUserCtrl.user.login"
+                                   data-ng-pattern="addUserCtrl.conditions.loginPattern"
+                                   data-ng-trim="true">
+                            <span class="input-group-addon"
+                                  data-uib-tooltip="{{::addUserCtrl.conditionsMessage}}"
+                                  data-tooltip-placement="right"
+                                  data-tooltip-append-to-body="true">
+                                <span class="oui-icon oui-icon-help_circle oui-icon_small" aria-hidden="true"></span>
+                             </span>
+                        </div>
                         <div data-ng-if="microsoftOfficeLicenseAddUserForm.login.$dirty">
                             <small class="help-block"
                                    data-i18n-static="microsoft_office_license_add_user_required"
@@ -87,10 +95,6 @@
                                data-ng-if="microsoftOfficeLicenseAddUserForm.licence.$dirty && microsoftOfficeLicenseAddUserForm.licence.$invalid">
                         </small>
                     </div>
-                </div>
-
-                <div class="alert alert-info mb-5" role="alert"
-                     data-ng-bind-html="tr('microsoft_office_license_add_user_login_conditions',[addUserCtrl.conditions.minLength,addUserCtrl.conditions.maxLength])">
                 </div>
             </form>
         </div>

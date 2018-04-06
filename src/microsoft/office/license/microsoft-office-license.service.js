@@ -276,4 +276,10 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
             loginPattern: /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/
         };
     }
+
+    getLoginConditionsMessage () {
+        const conditions = this.constructor.getLoginConditions();
+        return `${this.translator.tr("microsoft_office_license_add_user_login_conditions", [conditions.minLength, conditions.maxLength])}` +
+               `${this.translator.tr("microsoft_office_license_add_user_login_condition_exception")}`;
+    }
 });

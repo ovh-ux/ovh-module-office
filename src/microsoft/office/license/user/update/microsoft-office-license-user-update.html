@@ -46,13 +46,21 @@
                     <label class="control-label col-md-4 required" for="login"
                            data-i18n-static="microsoft_office_license_add_user_login_label"></label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="login" name="login" required
-                               data-ng-minLength="updateUserCtrl.conditions.minLength"
-                               data-ng-maxLength="updateUserCtrl.conditions.maxLength"
-                               data-ng-model="updateUserCtrl.user.login"
-                               data-ng-model-options="{updateOn: 'blur'}"
-                               data-ng-pattern="updateUserCtrl.conditions.loginPattern"
-                               data-ng-trim="true">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="login" name="login" required
+                                   data-ng-minLength="updateUserCtrl.conditions.minLength"
+                                   data-ng-maxLength="updateUserCtrl.conditions.maxLength"
+                                   data-ng-model="updateUserCtrl.user.login"
+                                   data-ng-model-options="{updateOn: 'blur'}"
+                                   data-ng-pattern="updateUserCtrl.conditions.loginPattern"
+                                   data-ng-trim="true">
+                            <span class="input-group-addon"
+                                  data-uib-tooltip="{{::updateUserCtrl.conditionsMessage}}"
+                                  data-tooltip-placement="right"
+                                  data-tooltip-append-to-body="true">
+                                <span class="oui-icon oui-icon-help_circle oui-icon_small" aria-hidden="true"></span>
+                            </span>
+                        </div>
                         <div data-ng-if="microsoftOfficeLicenseUserUpdateForm.login.$dirty"
                              data-ng-messages="microsoftOfficeLicenseUserUpdateForm.login.$error">
                             <small class="help-block"
@@ -73,11 +81,6 @@
                             </small>
                         </div>
                     </div>
-                </div>
-
-                <div class="alert alert-info" role="alert">
-                    <p data-ng-bind-html="tr('microsoft_office_license_add_user_login_conditions', [updateUserCtrl.conditions.minLength, updateUserCtrl.conditions.maxLength])"></p>
-                    <p data-i18n-static="microsoft_office_license_add_user_login_condition_exception"></p>
                 </div>
             </form>
         </div>

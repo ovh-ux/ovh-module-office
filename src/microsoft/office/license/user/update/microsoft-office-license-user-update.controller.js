@@ -13,6 +13,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         };
 
         this.conditions = this.microsoftOfficeLicenseService.constructor.getLoginConditions();
+        this.conditionsMessage = this.microsoftOfficeLicenseService.getLoginConditionsMessage();
         this.user = angular.copy(this.$scope.currentActionData.user);
 
         if (!_.isEmpty(this.user.activationEmail)) {
