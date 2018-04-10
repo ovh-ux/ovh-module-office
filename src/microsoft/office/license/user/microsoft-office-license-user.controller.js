@@ -19,7 +19,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
     transformItem ({ id }) {
         return this.license.getUserDetails(this.$scope.currentLicense, id)
             .then((details) => {
-                if (details.status !== "ok") {
+                if (details.status !== "ok" || (details.isVirtual && details.taskPendingId)) {
                     details.isLoading = true;
                     this.license.pollUserDetails(this.$scope.currentLicense, id, this.$scope)
                         .then(() => this.delayedGetUsers())
@@ -33,7 +33,6 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
                 status: "error"
             }));
     }
-
 
     getUserIds () {
         this.users = null;

@@ -116,7 +116,8 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
         return this.pollService.poll(`${this.basePath}/${licenseId}/user/${userId}`, null, {
             scope: $scope.$id,
             successRule: {
-                status: "ok"
+                status: "ok",
+                taskPendingId: 0
             },
             namespace
         });

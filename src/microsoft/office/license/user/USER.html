@@ -18,7 +18,7 @@
                 <oui-column data-title="tr('microsoft_office_license_detail_user_licenses')" data-property="licences">
                     <span data-ng-repeat="licence in $row.licences track by $index" data-ng-bind="licence"></span>
                 </oui-column>
-                <oui-column data-title="tr('microsoft_office_license_detail_user_status')" data-property="">
+                <oui-column data-title="tr('microsoft_office_license_detail_user_status')">
                     <span class="label"
                           data-ng-if="!$row.isVirtual && $row.status"
                           data-ng-bind="tr('microsoft_office_license_user_status_' + $row.status)"
@@ -29,7 +29,7 @@
                     </span>
                     <span class="label label-info"
                           data-ng-if="$row.isVirtual"
-                          data-i18n-static="microsoft_office_license_detail_user_not_configure">
+                          data-ng-bind-html="$row.taskPendingId ? tr('microsoft_office_license_user_status_creating') : tr('microsoft_office_license_detail_user_not_configure')">
                     </span>
                 </oui-column>
                 <oui-action-menu data-align="end" data-compact data-ng-hide="$row.isLoading">
