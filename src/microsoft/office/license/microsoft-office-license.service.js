@@ -268,4 +268,18 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
             this.$window.open(`${expressOrderUrl}#/new/express/resume?products=${JSURL.stringify(answer)}`, "_blank");
         });
     }
+
+    static getLoginConditions () {
+        return {
+            minLength: 3,
+            maxLength: 20,
+            loginPattern: /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/
+        };
+    }
+
+    getLoginConditionsMessage () {
+        const conditions = this.constructor.getLoginConditions();
+        return `${this.translator.tr("microsoft_office_license_add_user_login_conditions", [conditions.minLength, conditions.maxLength])}
+                ${this.translator.tr("microsoft_office_license_add_user_login_condition_exception")}`;
+    }
 });
