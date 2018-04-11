@@ -9,9 +9,9 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
     }
 
     $onInit () {
-        this.$scope.$on("microsoft.office.license.user.add", () => this.delayedGetUsers());
-        this.$scope.$on("microsoft.office.license.user.edit", () => this.delayedGetUsers());
-        this.$scope.$on("microsoft.office.license.user.delete", () => this.delayedGetUsers());
+        this.$scope.$on("microsoft.office.license.user.add", () => this.refreshUsers());
+        this.$scope.$on("microsoft.office.license.user.edit", () => this.refreshUsers());
+        this.$scope.$on("microsoft.office.license.user.delete", () => this.refreshUsers());
 
         this.getUserIds();
     }
@@ -44,5 +44,14 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
     delayedGetUsers () {
         return this.$timeout(() => this.getUserIds(), 250);
+    }
+
+    scrollToAlert () {
+        this.$timeout(() => document.getElementById("action-alert").scrollIntoView(false));
+    }
+
+    refreshUsers () {
+        this.delayedGetUsers();
+        this.scrollToAlert();
     }
 });
