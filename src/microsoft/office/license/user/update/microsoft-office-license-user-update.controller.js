@@ -8,12 +8,12 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
     }
 
     $onInit () {
-        this.loginPattern = /^(?!\.)(?:[-!#$%&'\^_`{}~A-Za-z\d]|\.(?!\.))+(?!\.)$/;
-
         this.loaders = {
             userEdit: false
         };
 
+        this.conditions = this.microsoftOfficeLicenseService.constructor.getLoginConditions();
+        this.conditionsMessage = this.microsoftOfficeLicenseService.getLoginConditionsMessage();
         this.user = angular.copy(this.$scope.currentActionData.user);
 
         if (!_.isEmpty(this.user.activationEmail)) {

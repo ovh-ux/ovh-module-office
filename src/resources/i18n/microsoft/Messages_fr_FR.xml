@@ -87,8 +87,11 @@
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">L'utilisateur suivant sera ajouté</translation>
    <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Sélectionnez une licence</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Une erreur est survenue lors de l'ajout de l'utilisateur</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">Le nom d'utilisateur doit contenir au minimum 3 caractères</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">Le nom d'utilisateur est limité à 20 caractères maximum</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions">Votre login doit contenir entre 3 et 20 caractères maximum. Il peut inclure des chiffres, des lettres et les caractères suivants : - _ ! # $ % & ' ^ ` { }</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception">Il peut également contenir des points, à condition qu’ils soient précédés d'un caractère autorisé et qu'ils ne soient pas suivis d’un autre point.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern">Le nom d'utilisateur contient des caractères non autorisés</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength">Le nom d'utilisateur doit contenir au minimum {0} caractères</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength">Le nom d'utilisateur est limité à {0} caractères maximum</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Les champs marqués d'une {0} sont obligatoires.</translation>
 
    <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
