@@ -7,6 +7,7 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         this.$scope = $scope;
 
         this.licenseId = this.$scope.currentActionData.license;
+        $scope.getLicensePrice = () => this.getLicensePrice();
     }
 
     $onInit () {
@@ -14,7 +15,9 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
             domain: this.licenseId
         };
         this.licenseEnum = [];
+        this.licensePrice = {};
         this.loaders = {
+            licensePrice: false,
             licenseEnum: false,
             userAdd: false
         };
@@ -40,6 +43,15 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
         };
 
         this.getLicenses();
+    }
+
+    getLicensePrice () {
+        this.loaders.licensePrice = true;
+
+        this.licenseService.getLicensePrice(this.user.licence)
+            .then((licensePrice) => { this.licensePrice = licensePrice; })
+            .catch(() => { this.licensePrice.text = this.$scope.tr("microsoft_office_license_add_user_license_price_error"); })
+            .finally(() => { this.loaders.licensePrice = false; });
     }
 
     getLicenses () {

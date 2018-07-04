@@ -91,7 +91,8 @@
             </form>
         </div>
 
-        <div data-wizard-step>
+        <div data-wizard-step
+            data-wizard-step-on-load="getLicensePrice">
             <p data-i18n-static="microsoft_office_license_add_user_confirm"></p>
             <dl class="dl-horizontal dl-lg">
                 <dt data-i18n-static="microsoft_office_license_add_user_firstName_label"></dt>
@@ -105,6 +106,12 @@
 
                 <dt data-i18n-static="microsoft_office_license_add_user_login_label"></dt>
                 <dd data-ng-bind="addUserCtrl.user.login"></dd>
+
+                <dt data-i18n-static="common_price"></dt>
+                <dd>
+                    <oui-spinner data-ng-if="addUserCtrl.loaders.licensePrice" size="s"></oui-spinner>
+                    <span class="text-danger" data-ng-if="!addUserCtrl.loaders.licensePrice" data-ng-bind="addUserCtrl.licensePrice.text"></span>
+                </dd>
             </dl>
             <div class="alert alert-info" role="alert"
                  data-i18n-static="microsoft_office_license_add_user_price_warning">
