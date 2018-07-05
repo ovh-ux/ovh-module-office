@@ -95,7 +95,7 @@
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Les champs marqués d'une {0} sont obligatoires.</translation>
    <translation id="microsoft_office_license_add_user_license_price_error">Impossible de récupérer le prix</translation>
    <translation id="microsoft_office_license_add_user_price_per_user">Prix ​​par utilisateur</translation>
-   <translation id="microsoft_office_license_add_user_price">{0} HT</translation>
+   <translation id="microsoft_office_license_add_user_price">{0} HT / mois</translation>
 
    <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
    <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Type de licence</translation>
