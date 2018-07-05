@@ -121,7 +121,7 @@
                     <oui-spinner data-ng-if="addUserCtrl.loaders.licensePrice" data-size="s"></oui-spinner>
                     <span class="text-danger" data-ng-if="!addUserCtrl.loaders.licensePrice">
                         <span data-ng-if="addUserCtrl.licensePrice.errText" data-ng-bind="addUserCtrl.licensePrice.errText"></span>
-                        <span data-ng-if="!addUserCtrl.licensePrice.errText" data-ng-bind="addUserCtrl.licensePrice.text"></span>
+                        <span data-ng-if="!addUserCtrl.licensePrice.errText" data-ng-bind="tr('microsoft_office_license_add_user_price', [addUserCtrl.licensePrice.text])"></span>
                     </span>
                 </dd>
             </dl>
