@@ -48,10 +48,10 @@ angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicens
 
     getLicensePrice () {
         this.loaders.licensePrice = true;
-
+        this.licensePrice.errText = "";
         this.licenseService.getLicensePrice(this.user.licence)
-            .then((licensePrice) => { this.licensePrice = licensePrice; })
-            .catch(() => { this.licensePrice.text = this.$scope.tr("microsoft_office_license_add_user_license_price_error"); })
+            .then((licensePrice) => { this.licensePrice.text = licensePrice.text; })
+            .catch(() => { this.licensePrice.errText = this.$scope.tr("microsoft_office_license_add_user_license_price_error"); })
             .finally(() => { this.loaders.licensePrice = false; });
     }
 

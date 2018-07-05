@@ -119,7 +119,10 @@
                 <dt data-i18n-static="microsoft_office_license_add_user_price_per_user"></dt>
                 <dd>
                     <oui-spinner data-ng-if="addUserCtrl.loaders.licensePrice" data-size="s"></oui-spinner>
-                    <span class="text-danger" data-ng-if="!addUserCtrl.loaders.licensePrice" data-ng-bind="addUserCtrl.licensePrice.text"></span>
+                    <span class="text-danger" data-ng-if="!addUserCtrl.loaders.licensePrice">
+                        <span data-ng-if="addUserCtrl.licensePrice.errText" data-ng-bind="addUserCtrl.licensePrice.errText"></span>
+                        <span data-ng-if="!addUserCtrl.licensePrice.errText" data-ng-bind="addUserCtrl.licensePrice.text"></span>
+                    </span>
                 </dd>
             </dl>
             <div class="alert alert-info" role="alert"
