@@ -93,6 +93,16 @@ angular.module("Module.microsoft.services").service("MicrosoftOfficeLicenseServi
     }
 
     /**
+     * Get the monthly price for an office license
+     * @return {Object} Price with it's currency and textual representation
+     */
+    getLicensePrice (licenseName) {
+        return this.ovhHttp.get(`/price/license/office/${licenseName}`, {
+            rootPath: "apiv6"
+        });
+    }
+
+    /**
      * Get infos of a user
      * @param  {string} licenseId [description]
      * @param  {string} userId    [description]
