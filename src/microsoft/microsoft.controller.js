@@ -1,1 +1,1 @@
-angular.module("Module.microsoft.controllers", []);
+angular.module('Module.microsoft.controllers', []);

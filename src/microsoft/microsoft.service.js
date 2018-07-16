@@ -1,1 +1,1 @@
-angular.module("Module.microsoft.services", []);
+angular.module('Module.microsoft.services', []);
