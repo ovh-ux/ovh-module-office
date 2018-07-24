@@ -41,7 +41,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Poista käyttäjä</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Käyttäjä poistetaan heti vahvistuksen jälkeen.</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Koska Office 365 -tuotteidemme laskutus perustuu edellisen kuukauden kulutukseen, saat tätä tiliä koskevan viimeisen laskun</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure">Non configuré</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="124952">Ei konfiguroitu</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Lisää käyttäjä</translation>
    <translation id="microsoft_office_license_user_order" qtlid="446598">Tilaa lisää lisenssejä</translation>
@@ -87,15 +87,15 @@
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">Seuraava käyttäjä lisätään</translation>
    <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Valitse lisenssi</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Tapahtui virhe käyttäjän lisäyksen aikana</translation>
-   <translation id="microsoft_office_license_add_user_login_conditions">Votre login doit contenir entre 3 et 20 caractères maximum. Il peut inclure des chiffres, des lettres et les caractères suivants :&#160;- _ ! # $ % & ' ^ ` { }</translation>
-   <translation id="microsoft_office_license_add_user_login_condition_exception">Il peut également contenir des points, à condition qu’ils soient précédés d'un caractère autorisé et qu'ils ne soient pas suivis d’un autre point.</translation>
-   <translation id="microsoft_office_license_add_user_login_invalid_pattern">Le nom d'utilisateur contient des caractères non autorisés</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength">Le nom d'utilisateur doit contenir au minimum {0} caractères</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength">Le nom d'utilisateur est limité à {0} caractères maximum</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions" qtlid="492799">Käyttäjätunnuksessa on oltava 3 - 20 merkkiä. Se voi sisältää:&#160;- _ ! # $ % & ' ^ ` { }</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception" qtlid="492708">Se voi sisältää lisäksi pisteitä kunhan sitä edeltää hyväksytty merkki eikä sitä seuraa toinen piste.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern" qtlid="492721">Käyttäjätunnus sisältää kiellettyjä merkkejä</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="492734">Käyttäjätunnuksen täytyy sisältää vähintään {0} merkkiä</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="492747">Käyttäjätunnuksessa voi olla enintään {0} merkkiä</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Symbolilla {0} merkityt kentät ovat pakollisia.</translation>
-   <translation id="microsoft_office_license_add_user_license_price_error">Impossible de récupérer le prix</translation>
-   <translation id="microsoft_office_license_add_user_price_per_user">Prix ​​par utilisateur</translation>
-   <translation id="microsoft_office_license_add_user_price">{0} HT / mois</translation>
+   <translation id="microsoft_office_license_add_user_license_price_error" qtlid="492760">Hinnan hakeminen ei onnistu</translation>
+   <translation id="microsoft_office_license_add_user_price_per_user" qtlid="492773">Hinta käyttäjää kohti</translation>
+   <translation id="microsoft_office_license_add_user_price" qtlid="492786">{0} ALV0 / kk</translation>
 
    <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">Vahvistamalla tämän sinut uudelleenohjataan tilauslomakkeeseen. Kun olet maksanut tilaksesi, palaa tänne uusien käyttäjien konfiguroimista varten.</translation>
    <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Lisenssin tyyppi</translation>

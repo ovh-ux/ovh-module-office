@@ -41,7 +41,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Eliminación de un usuario</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">El usuario se eliminará inmediatamente tras la confirmación.</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">La facturación de nuestras soluciones Office 365 se realiza sobre el consumo del mes anterior, por lo que recibirá una última factura asociada a esta cuenta.</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure">Non configuré</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="124952">No configurado</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Añadir un usuario </translation>
    <translation id="microsoft_office_license_user_order" qtlid="446598">Contratar más licencias</translation>
@@ -87,15 +87,16 @@
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">Se va a añadir el siguiente usuario:</translation>
    <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Seleccione una licencia</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Se ha producido un error al añadir al usuario. </translation>
-   <translation id="microsoft_office_license_add_user_login_conditions">Votre login doit contenir entre 3 et 20 caractères maximum. Il peut inclure des chiffres, des lettres et les caractères suivants :&#160;- _ ! # $ % & ' ^ ` { }</translation>
-   <translation id="microsoft_office_license_add_user_login_condition_exception">Il peut également contenir des points, à condition qu’ils soient précédés d'un caractère autorisé et qu'ils ne soient pas suivis d’un autre point.</translation>
-   <translation id="microsoft_office_license_add_user_login_invalid_pattern">Le nom d'utilisateur contient des caractères non autorisés</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength">Le nom d'utilisateur doit contenir au minimum {0} caractères</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength">Le nom d'utilisateur est limité à {0} caractères maximum</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions" qtlid="492799">El nombre de usuario debe tener una longitud de entre 3 y 20 caracteres. Puede incluir cifras, letras y los siguientes caracteres: - _ ! # $ % & ' ^ ` { }&#13;
+</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception" qtlid="492708">También puede incluir puntos, siempre que estos vayan precedidos por un carácter autorizado y no vayan seguidos de otro punto.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern" qtlid="492721">El nombre de usuario contiene caracteres no autorizados.</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="492734">El nombre de usuario debe contener al menos {0} caracteres.</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="492747">El nombre de usuario no debe contener más de {0} caracteres.</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Los campos marcados con un {0} son obligatorios.</translation>
-   <translation id="microsoft_office_license_add_user_license_price_error">Impossible de récupérer le prix</translation>
-   <translation id="microsoft_office_license_add_user_price_per_user">Prix ​​par utilisateur</translation>
-   <translation id="microsoft_office_license_add_user_price">{0} HT / mois</translation>
+   <translation id="microsoft_office_license_add_user_license_price_error" qtlid="492760">No es posible mostrar el precio.</translation>
+   <translation id="microsoft_office_license_add_user_price_per_user" qtlid="492773">Precio por usuario</translation>
+   <translation id="microsoft_office_license_add_user_price" qtlid="492786">{0} /mes + IVA</translation>
 
    <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">Cuando acepte, la aplicación le redirigirá a la orden de pedido. Vuelva aquí una vez realizado el pago para configurar los nuevos usuarios.</translation>
    <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Tipo de licencia</translation>
