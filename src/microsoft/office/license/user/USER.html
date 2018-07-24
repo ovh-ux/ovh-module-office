@@ -1,7 +1,7 @@
 <div class="container-fluid px-0" data-ng-controller="MicrosoftOfficeLicenseUsersCtrl as usersCtrl">
     <div class="row">
         <div class="col-md-9">
-            <div data-ovh-alert="{{alerts.main}}"></div>
+            <div data-ovh-alert="{{alerts.main}}" id="action-alert"></div>
 
             <p>
                 <span class="fa fa-download mr-2" aria-hidden="true"></span>
@@ -10,103 +10,39 @@
             <p data-i18n-static="license_office_users_download_info"></p>
             <p class="font-weight-bold" data-i18n-static="license_office_users_download_id"></p>
 
-            <div class="table-responsive mt-5">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col" data-i18n-static="microsoft_office_license_detail_user_firstname"></th>
-                            <th scope="col" data-i18n-static="microsoft_office_license_detail_user_lastname"></th>
-                            <th scope="col" data-i18n-static="microsoft_office_license_detail_user_activationEmail"></th>
-                            <th scope="col" data-i18n-static="microsoft_office_license_detail_user_licenses"></th>
-                            <th scope="col" data-i18n-static="microsoft_office_license_detail_user_status"></th>
-                            <th class="min-width text-right" scope="col">
-                                <button class="btn btn-icon" title="{{i18n.microsoft_office_license_detail_user_refresh}}"
-                                        data-ng-click="usersCtrl.getUsersId()">
-                                    <span class="fa fa-refresh" aria-hidden="true"></span>
-                                </button>
-                            </th>
-                        </tr>
-                    </thead>
-
-                    <tbody data-ng-if="usersCtrl.loaders.users">
-                        <tr>
-                            <td class="loader text-center" colspan="6"></td>
-                        </tr>
-                    </tbody>
-
-                    <tbody data-ng-if="!usersCtrl.loaders.users && !usersCtrl.users.length">
-                        <tr>
-                            <td class="text-center" colspan="6"
-                                data-i18n-static="microsoft_office_license_detail_user_no_users">
-                            </td>
-                        </tr>
-                    </tbody>
-
-                    <tbody data-ng-if="!usersCtrl.loaders.users && usersCtrl.users.length > 0">
-                        <tr data-ng-repeat="user in usersCtrl.usersDetails track by $index">
-                            <th scope="row"
-                                data-ng-bind="user.firstName || '-'"
-                                data-ng-if="!user.isVirtual"></th>
-                            <td data-ng-bind="user.lastName || '-'"
-                                data-ng-if="!user.isVirtual"></td>
-                            <td class="word-break"
-                                data-ng-bind="user.activationEmail || '-'"
-                                data-ng-if="!user.isVirtual"></td>
-                            <td data-ng-if="!user.isVirtual">
-                                <span class="d-block"
-                                      data-ng-repeat="licence in user.licences track by $index"
-                                      data-ng-bind="licence">
-                                </span>
-                            </td>
-                            <td data-ng-if="!user.isVirtual">
-                                <span class="label"
-                                      data-ng-bind="tr('microsoft_office_license_user_status_' + user.status)"
-                                      data-ng-class="{
-                                        'label-success': user.status === 'ok',
-                                        'label-danger': user.status === 'deleting',
-                                        'label-info': user.status === 'creating'}"></span>
-                            </td>
-
-                            <td class="text-center" colspan="5"
-                                data-ng-if="user.isVirtual">
-                                <span class="label label-info"
-                                      data-i18n-static="microsoft_office_license_detail_user_not_configure">
-                                </span>
-                            </td>
-
-                            <td class="text-center">
-                                <oui-spinner data-size="s" data-ng-if="usersCtrl.loaders.userPoll[user.activationEmail]"></oui-spinner>
-
-                                <button class="btn btn-icon" type="button" title="{{user.activationEmail}} {{::i18n.table_manage_entry}}"
-                                        data-ng-if="!usersCtrl.loaders.userPoll[user.activationEmail]"
-                                        data-linkedpopover="microsoft/office/license/popover/user.html"
-                                        data-linkedpopover-placement="left"
-                                        data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true"
-                                        data-linkedpopover-title="{{i18n.common_actions}}">
-                                    <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="clearfix"
-                 data-ng-if="usersCtrl.users">
-                <div data-pagination-front
-                     data-items="usersCtrl.users"
-                     data-paginated-items="usersCtrl.usersDetails"
-                     data-current-page="currentPageUsers"
-                     data-nb-pages="nbPages"
-                     data-items-per-page="itemsPerPage"
-                     data-transform-item="usersCtrl.transformItem(item)"
-                     data-on-transform-item-done="usersCtrl.onTransformItemDone(items)"
-                     data-page-placeholder="{{tr('pagination_page', [currentPageDynHosts, nbPages])}}"
-                     data-item-per-page-placeholder="{{tr('pagination_display')}}"
-                     data-ng-show="!usersCtrl.loaders.users && usersCtrl.usersDetails.length > 0">
-                </div>
-            </div>
+            <oui-datagrid data-rows="usersCtrl.users"
+                          data-row-loader="usersCtrl.transformItem($row)">
+                <oui-column data-title="tr('microsoft_office_license_detail_user_firstname')" data-property="firstName"></oui-column>
+                <oui-column data-title="tr('microsoft_office_license_detail_user_lastname')" data-property="lastName"></oui-column>
+                <oui-column data-title="tr('microsoft_office_license_detail_user_activationEmail')" data-property="activationEmail"></oui-column>
+                <oui-column data-title="tr('microsoft_office_license_detail_user_licenses')" data-property="licences">
+                    <span data-ng-repeat="licence in $row.licences track by $index" data-ng-bind="licence"></span>
+                </oui-column>
+                <oui-column data-title="tr('microsoft_office_license_detail_user_status')">
+                    <span class="label"
+                          data-ng-if="!$row.isVirtual && $row.status"
+                          data-ng-bind="tr('microsoft_office_license_user_status_' + $row.status)"
+                          data-ng-class="{
+                            'label-success': $row.status === 'ok',
+                            'label-danger': $row.status === 'deleting' || $row.status === 'error',
+                            'label-info': $row.status === 'creating'}">
+                    </span>
+                    <span class="label label-info"
+                          data-ng-if="$row.isVirtual"
+                          data-ng-bind-html="$row.taskPendingId ? tr('microsoft_office_license_user_status_creating') : tr('microsoft_office_license_detail_user_not_configure')">
+                    </span>
+                </oui-column>
+                <oui-action-menu data-align="end" data-compact data-ng-if="!$row.isLoading">
+                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_change_password')}}"
+                                          data-on-click="setAction('edit/password/microsoft-office-edit-password', {'user': $row, 'licenseId': currentLicense, 'license': $row.license})"
+                                          data-ng-if="!$row.isVirtual"></oui-action-menu-item>
+                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_update')}}"
+                                          data-on-click="setAction('user/update/microsoft-office-license-user-update', {'user': $row, 'licenseId': currentLicense, 'license': $row.license})"></oui-action-menu-item>
+                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_delete')}}"
+                                          data-on-click="setAction('user/delete/microsoft-office-license-user-delete', {'user': $row, 'license': currentLicense})"
+                                          data-ng-if="!$row.isVirtual"></oui-action-menu-item>
+                </oui-action-menu>
+            </oui-datagrid>
         </div>
 
         <div class="col-md-3 mt-5 mt-lg-0">

@@ -1,73 +1,56 @@
-angular.module("Module.microsoft.controllers").controller("MicrosoftOfficeLicenseUsersCtrl", class MicrosoftOfficeLicenseUsersCtrl {
+angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicenseUsersCtrl', class MicrosoftOfficeLicenseUsersCtrl {
+  constructor(MicrosoftOfficeLicenseService, $stateParams, $scope, $timeout, Alerter) {
+    this.license = MicrosoftOfficeLicenseService;
+    this.currentLicense = $stateParams.serviceName;
+    this.$scope = $scope;
+    this.$timeout = $timeout;
+    this.Alerter = Alerter;
+  }
 
-    constructor (MicrosoftOfficeLicenseService, $stateParams, $scope, $timeout, Alerter) {
-        this.license = MicrosoftOfficeLicenseService;
-        this.$stateParams = $stateParams;
-        this.$scope = $scope;
-        this.$timeout = $timeout;
-        this.Alerter = Alerter;
+  $onInit() {
+    this.$scope.$on('microsoft.office.license.user.add', () => this.refreshUsers());
+    this.$scope.$on('microsoft.office.license.user.edit', () => this.refreshUsers());
+    this.$scope.$on('microsoft.office.license.user.delete', () => this.refreshUsers());
 
-        this.delayedGetUser = () => this.$timeout(() => {
-            this.getUsersId();
-        }, 250);
-    }
+    this.getUserIds();
+  }
 
-    $onInit () {
-        this.currentLicense = this.$stateParams.serviceName;
+  transformItem({ id }) {
+    return this.license.getUserDetails(this.$scope.currentLicense, id)
+      .then((details) => {
+        if (details.taskPendingId) {
+          _.set(details, 'isLoading', true);
+          this.license.pollUserDetails(this.$scope.currentLicense, id, this.$scope)
+            .then(() => this.delayedGetUsers())
+            .finally(() => { _.set(details, 'isLoading', false); });
+        }
+        return details;
+      })
+      .catch(() => ({
+        id,
+        activationEmail: id,
+        status: 'error',
+      }));
+  }
 
-        this.usersDetails = [];
-        this.loaders = {
-            users: false,
-            userPoll: {}
-        };
+  getUserIds() {
+    this.users = null;
 
-        this.$scope.$on("microsoft.office.license.user.add", this.delayedGetUser);
-        this.$scope.$on("microsoft.office.license.user.edit", this.delayedGetUser);
-        this.$scope.$on("microsoft.office.license.user.delete", this.delayedGetUser);
+    return this.license.getUsers(this.currentLicense)
+      .then((users) => { this.users = users.map(id => ({ id })); })
+      .catch(err => this.Alerter.error(err.message, this.$scope.alerts.tabs));
+  }
 
-        this.getUsersId();
-    }
+  delayedGetUsers() {
+    return this.$timeout(() => this.getUserIds(), 250);
+  }
 
-    transformItem (item) {
-        return this.license.getUserDetails(this.$scope.currentLicense, item)
-            .then((details) => {
-                if (details.status !== "ok") {
-                    this.loaders.userPoll[item] = true;
+  scrollToAlert() {
+    this.$timeout(() => document.getElementById('action-alert').scrollIntoView(false));
+  }
 
-                    this.license.pollUserDetails(this.$scope.currentLicense, item, this.$scope)
-                        .then(() => {
-                            this.loaders.userPoll.item = false;
-                            return this.delayedGetUser();
-                        })
-                        .catch((err) => {
-                            this.loaders.userPoll.item = false;
-                            return err;
-                        });
-                }
-                return details;
-            })
-            .catch((err) => {
-                this.loaders.userPoll.item = false;
-                return err;
-            });
-    }
-
-    onTransformItemDone () {
-        this.loaders.users = false;
-    }
-
-
-    getUsersId () {
-        this.loaders.users = true;
-        this.users = null;
-
-        return this.license.getUsers(this.currentLicense)
-            .then((users) => { this.users = users; })
-            .catch((err) => this.Alerter.error(err.message, this.$scope.alerts.tabs))
-            .finally(() => {
-                if (_.isEmpty(this.users)) {
-                    this.loaders.users = false;
-                }
-            });
-    }
+  refreshUsers() {
+    this.delayedGetUsers();
+    this.scrollToAlert();
+  }
 });

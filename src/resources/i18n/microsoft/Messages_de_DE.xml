@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_firstname" qtlid="23323">Vorname</translation>
    <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Name</translation>
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Status</translation>
+   <translation id="microsoft_office_license_detail_user_error" qtlid="226423">Es ist ein Fehler aufgetreten: {0}</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktivierungs-E-Mail</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Lizenzen</translation>
    <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Daten neu laden</translation>
@@ -40,10 +41,10 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Löschung eines Benutzers</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Nach der Bestätigung wird der Benutzer automatisch gelöscht</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Da unsere Office 365 Produkte immer nach dem vergangenen Monat abgerechnet werden, werden Sie noch eine letzte Rechnung zu diesem Account erhalten</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Benutzer nicht konfiguriert</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="124952">Nicht konfiguriert</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Einen Benutzer hinzufügen</translation>
-   <translation id="microsoft_office_license_user_order">Commander plus de licences</translation>
+   <translation id="microsoft_office_license_user_order" qtlid="446598">Weitere Lizenzen bestellen</translation>
 
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Domainname</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">TXT Eintrag</translation>
@@ -51,10 +52,11 @@
    <translation id="microsoft_office_license_user_status_creating" qtlid="26227">Wird erstellt</translation>
    <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">Wird gelöscht</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Erstellt</translation>
-   <translation id="microsoft_office_license_user_change_password" qtlid="80394">Das Passwort ändern</translation>
+   <translation id="microsoft_office_license_user_status_error" qtlid="26407">Fehler</translation>
+   <translation id="microsoft_office_license_user_change_password" qtlid="80394">Passwort ändern</translation>
    <translation id="microsoft_office_license_user_update" qtlid="404512">Account bearbeiten</translation>
    <translation id="microsoft_office_license_user_delete" qtlid="150294">Den Account entfernen</translation>
-   <translation id="microsoft_office_license_user_edit_password" qtlid="8434">Das Passwort ändern</translation>
+   <translation id="microsoft_office_license_user_edit_password" qtlid="8434">Passwort ändern</translation>
    <translation id="microsoft_office_license_user_edit_password_info" qtlid="91129">Passwort:</translation>
    <translation id="microsoft_office_license_user_edit_password_confirm" qtlid="197063">Bestätigung:</translation>
    <translation id="microsoft_office_license_user_edit_password_email_field" qtlid="89028">E-Mail Adresse:</translation>
@@ -83,16 +85,22 @@
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Login</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Pflichtangabe</translation>
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">Folgender Benutzer wird hinzugefügt</translation>
-   <translation id="microsoft_office_license_add_user_license_none">Sélectionnez une licence</translation>
+   <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Wählen Sie eine Lizenz aus</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Beim Hinzufügen des Benutzers ist ein Fehler aufgetreten</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">Der Login muss mindestens 3 Zeichen lang sein</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">Der Login darf höchstens 20 Zeichen lang sein</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions" qtlid="492799">Ihr Login muss zwischen 3 und 20 Zeichen lang sein und darf Ziffern, Buchstaben sowie die folgenden Zeichen enthalten:&#160;- _ ! # $ % & ' ^ ` { }</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception" qtlid="492708">Er darf auch Punkte enthalten, sofern diese nach einem gültigen Zeichen und nicht vor einem anderen Punkt stehen.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern" qtlid="492721">Der Benutzername enthält ungültige Zeichen.</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="492734">Der Benutzername muss mindestens {0} Zeichen enthalten.</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="492747">Der Benutzername darf höchstens {0} Zeichen enthalten.</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Die mit {0} markierten Felder sind Pflichtfelder.</translation>
+   <translation id="microsoft_office_license_add_user_license_price_error" qtlid="492760">Preisinformationen nicht verfügbar</translation>
+   <translation id="microsoft_office_license_add_user_price_per_user" qtlid="492773">Preis pro Benutzer</translation>
+   <translation id="microsoft_office_license_add_user_price" qtlid="492786">{0} / Monat (zzgl. MwSt.)</translation>
 
-   <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
-   <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
-   <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
-   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
+   <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">Wenn Sie bestätigen, werden Sie zum Bestellschein weitergeleitet. Kehren Sie hierher zurück, wenn dieser bezahlt ist, um Ihre neuen Benutzer zu konfigurieren.</translation>
+   <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Type der Lizenz</translation>
+   <translation id="microsoft_office_license_order_user_number_label" qtlid="325445">Anzahl der Lizenzen</translation>
+   <translation id="microsoft_office_license_order_user_license_none" qtlid="209658">Wählen Sie einen Typ</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Laufzeit:</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">Der laufende Monat</translation>

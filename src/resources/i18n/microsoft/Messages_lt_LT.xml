@@ -30,6 +30,7 @@
    <translation id="microsoft_office_license_detail_user_firstname" qtlid="23323">Vardas</translation>
    <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Pavadinimas</translation>
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Būsena</translation>
+   <translation id="microsoft_office_license_detail_user_error" qtlid="226423">Įvyko klaida:</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Aktyvavimo el. laiškas</translation>
    <translation id="microsoft_office_license_detail_user_licenses" qtlid="113658">Licencijos</translation>
    <translation id="microsoft_office_license_detail_user_refresh" qtlid="413284">Įkelti duomenis iš naujo</translation>
@@ -40,10 +41,10 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Naudotojo trynimas</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">Naudotojas bus pašalintas nedelsiant po patvirtinimo</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Sąskaitos už Office 365 produktus formuojamos remiantis praėjusio mėnesio suvartojimo duomenimis, jūs gausite paskutinę sąskaitą šiai paskyrai</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="416553">Vartotojas nesukonfigūruotas</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="124952">Nesukonfigūruota</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Pridėti naudotoją</translation>
-   <translation id="microsoft_office_license_user_order">Commander plus de licences</translation>
+   <translation id="microsoft_office_license_user_order" qtlid="446598">Užsakyti daugiau licenzijų</translation>
 
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Domeno pavadinimas</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Įvestas txt</translation>
@@ -51,6 +52,7 @@
    <translation id="microsoft_office_license_user_status_creating" qtlid="26227">Kuriama</translation>
    <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">Šalinama</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Sukurtas</translation>
+   <translation id="microsoft_office_license_user_status_error" qtlid="26407">Klaida</translation>
    <translation id="microsoft_office_license_user_change_password" qtlid="80394">Keisti slaptažodį</translation>
    <translation id="microsoft_office_license_user_update" qtlid="404512">Redaguoti paskyrą</translation>
    <translation id="microsoft_office_license_user_delete" qtlid="150294">Pašalinti paskyrą</translation>
@@ -83,16 +85,22 @@
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Prisijungimo vardas</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Šis laukas yra privalomas </translation>
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">Šis naudotojas bus pridėtas</translation>
-   <translation id="microsoft_office_license_add_user_license_none">Sélectionnez une licence</translation>
+   <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Pasirinkite licenziją</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Įvyko klaida pridedant naudotoją</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="264953">Naudotojo pavadinime turi būti bent 3 simboliai</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="264966">Naudotojo pavadinimas neturi viršyti 20 simbolių</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions" qtlid="492799">Votre login doit contenir entre 3 et 20 caractères maximum. Il peut inclure des chiffres, des lettres et les caractères suivants :&#160;- _ ! # $ % & ' ^ ` { }</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception" qtlid="492708">Il peut également contenir des points, à condition qu’ils soient précédés d'un caractère autorisé et qu'ils ne soient pas suivis d’un autre point.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern" qtlid="492721">Le nom d'utilisateur contient des caractères non autorisés</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="492734">Le nom d'utilisateur doit contenir au minimum {0} caractères</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="492747">Le nom d'utilisateur est limité à {0} caractères maximum</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">{0} pažymėti laukai yra privalomi.</translation>
+   <translation id="microsoft_office_license_add_user_license_price_error" qtlid="492760">Impossible de récupérer le prix</translation>
+   <translation id="microsoft_office_license_add_user_price_per_user" qtlid="492773">Prix ​​par utilisateur</translation>
+   <translation id="microsoft_office_license_add_user_price" qtlid="492786">{0} HT / mois</translation>
 
-   <translation id="microsoft_office_license_order_user_price_warning">En validant, vous serez redirigé vers le bon de commande. Revenez ici une fois le payement effectué pour configurer vos nouveaux utilisateurs.</translation>
-   <translation id="microsoft_office_license_order_user_license_label">Type de licence</translation>
-   <translation id="microsoft_office_license_order_user_number_label">Nombre de licences</translation>
-   <translation id="microsoft_office_license_order_user_license_none">Sélectionnez un type</translation>
+   <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">Po patvirtinimo būsite nukreipti į užsakymą. Grįžkite čia po apmokėjimo apdorojimo ir pradėkite valdyti savo paslaugas.</translation>
+   <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Licencijos tipas</translation>
+   <translation id="microsoft_office_license_order_user_number_label" qtlid="325445">Licencijų skaičius</translation>
+   <translation id="microsoft_office_license_order_user_license_none" qtlid="209658">Pasirinkite tipą</translation>
 
    <translation id="microsoft_office_license_usage_period_label" qtlid="156875">Trukmė:</translation>
    <translation id="microsoft_office_license_usage_period_current" qtlid="325198">Einamasis mėnuo</translation>
