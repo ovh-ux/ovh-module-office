@@ -41,7 +41,7 @@
    <translation id="microsoft_office_license_detail_user_delete_title" qtlid="49130">Een gebruiker verwijderen</translation>
    <translation id="microsoft_office_license_detail_user_delete_info1" qtlid="404486">De gebruiker wordt automatisch verwijderd na bevestiging</translation>
    <translation id="microsoft_office_license_detail_user_delete_info2" qtlid="404499">Omdat onze Office 365-producten aan het einde van de maand worden gefactureerd, voor diensten die in de vorige maand werden gebruikt, ontvangt u één laatste factuur voor dit account</translation>
-   <translation id="microsoft_office_license_detail_user_not_configure">Non configuré</translation>
+   <translation id="microsoft_office_license_detail_user_not_configure" qtlid="124952">Niet geconfigureerd</translation>
 
    <translation id="microsoft_office_license_user_add" qtlid="7150">Een gebruiker toevoegen</translation>
    <translation id="microsoft_office_license_user_order" qtlid="446598">Meer licenties bestellen</translation>
@@ -87,15 +87,16 @@
    <translation id="microsoft_office_license_add_user_confirm" qtlid="264914">De volgende gebruiker zal worden toegevoegd</translation>
    <translation id="microsoft_office_license_add_user_license_none" qtlid="446611">Selecteer een licentie</translation>
    <translation id="microsoft_office_license_detail_user_add_error" qtlid="264940">Er is een fout opgetreden tijdens het toevoegen van de gebruiker</translation>
-   <translation id="microsoft_office_license_add_user_login_conditions">Votre login doit contenir entre 3 et 20 caractères maximum. Il peut inclure des chiffres, des lettres et les caractères suivants :&#160;- _ ! # $ % & ' ^ ` { }</translation>
-   <translation id="microsoft_office_license_add_user_login_condition_exception">Il peut également contenir des points, à condition qu’ils soient précédés d'un caractère autorisé et qu'ils ne soient pas suivis d’un autre point.</translation>
-   <translation id="microsoft_office_license_add_user_login_invalid_pattern">Le nom d'utilisateur contient des caractères non autorisés</translation>
-   <translation id="microsoft_office_license_add_user_login_minlength">Le nom d'utilisateur doit contenir au minimum {0} caractères</translation>
-   <translation id="microsoft_office_license_add_user_login_maxlength">Le nom d'utilisateur est limité à {0} caractères maximum</translation>
+   <translation id="microsoft_office_license_add_user_login_conditions" qtlid="492799">Uw login moet tussen de 3 en maximaal 20 tekens lang zijn. Het kan cijfers, letters en de volgende tekens bevatten: - _! # $% & '^ `{}</translation>
+   <translation id="microsoft_office_license_add_user_login_condition_exception" qtlid="492708">Het mag ook punten bevatten, op voorwaarde dat ze worden voorafgegaan door een geldig teken en dat ze niet worden gevolgd door een ander punt.</translation>
+   <translation id="microsoft_office_license_add_user_login_invalid_pattern" qtlid="492721">Gebruikersnaam bevat ongeldige tekens</translation>
+   <translation id="microsoft_office_license_add_user_login_minlength" qtlid="492734">De gebruikersnaam moet ten minste {0} tekens bevatten</translation>
+   <translation id="microsoft_office_license_add_user_login_maxlength" qtlid="492747">De gebruikersnaam kan maximaal {0} tekens bevatten</translation>
    <translation id="microsoft_office_license_add_user_field_required" qtlid="404590">Velden gemarkeerd met een {0} zijn verplicht. </translation>
-   <translation id="microsoft_office_license_add_user_license_price_error">Impossible de récupérer le prix</translation>
-   <translation id="microsoft_office_license_add_user_price_per_user">Prix ​​par utilisateur</translation>
-   <translation id="microsoft_office_license_add_user_price">{0} HT / mois</translation>
+   <translation id="microsoft_office_license_add_user_license_price_error" qtlid="492760">Prijsinformatie niet beschikbaar&#13;
+</translation>
+   <translation id="microsoft_office_license_add_user_price_per_user" qtlid="492773">Prijs per gebruiker</translation>
+   <translation id="microsoft_office_license_add_user_price" qtlid="492786">{0} excl. btw/maand</translation>
 
    <translation id="microsoft_office_license_order_user_price_warning" qtlid="446624">Door dit te bevestigen wordt u doorgestuurd naar het bestelformulier. Zodra u voor uw status betaald hebt, komt u hier terug om nieuwe gebruikers te configureren.</translation>
    <translation id="microsoft_office_license_order_user_license_label" qtlid="83721">Type licentie</translation>
