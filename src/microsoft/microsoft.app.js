@@ -32,4 +32,4 @@ angular.module('Module.microsoft', [
     translations: ['microsoft'],
   });
 }])
-.constant('MICROSOFT_GUIDE_URLS', {});
+  .constant('MICROSOFT_GUIDE_URLS', {});
