@@ -28,11 +28,8 @@ angular.module('Module.microsoft', [
           configurationSelected: true,
         });
       }],
-      translator: ['translator', function (translator) {
-        return translator.load(['microsoft']).then(() => translator);
-      }],
     },
+    translations: ['microsoft'],
   });
-}]).run(['translator', 'MicrosoftOfficeLicenseService', function (translator) {
-  translator.load(['microsoft']);
-}]).constant('MICROSOFT_GUIDE_URLS', {});
+}])
+  .constant('MICROSOFT_GUIDE_URLS', {});

@@ -5,23 +5,23 @@
 
             <p>
                 <span class="fa fa-download mr-2" aria-hidden="true"></span>
-                <span data-ng-bind-html="tr('license_office_users_download_text')"></span>
+                <span data-ng-bind-html="'license_office_users_download_text' | translate"></span>
             </p>
-            <p data-i18n-static="license_office_users_download_info"></p>
-            <p class="font-weight-bold" data-i18n-static="license_office_users_download_id"></p>
+            <p data-translate="license_office_users_download_info"></p>
+            <p class="font-weight-bold" data-translate="license_office_users_download_id"></p>
 
             <oui-datagrid data-rows="usersCtrl.users"
                           data-row-loader="usersCtrl.transformItem($row)">
-                <oui-column data-title="tr('microsoft_office_license_detail_user_firstname')" data-property="firstName"></oui-column>
-                <oui-column data-title="tr('microsoft_office_license_detail_user_lastname')" data-property="lastName"></oui-column>
-                <oui-column data-title="tr('microsoft_office_license_detail_user_activationEmail')" data-property="activationEmail"></oui-column>
-                <oui-column data-title="tr('microsoft_office_license_detail_user_licenses')" data-property="licences">
+                <oui-column data-title="'microsoft_office_license_detail_user_firstname' | translate" data-property="firstName"></oui-column>
+                <oui-column data-title="'microsoft_office_license_detail_user_lastname' | translate" data-property="lastName"></oui-column>
+                <oui-column data-title="'microsoft_office_license_detail_user_activationEmail' | translate" data-property="activationEmail"></oui-column>
+                <oui-column data-title="'microsoft_office_license_detail_user_licenses' | translate" data-property="licences">
                     <span data-ng-repeat="licence in $row.licences track by $index" data-ng-bind="licence"></span>
                 </oui-column>
-                <oui-column data-title="tr('microsoft_office_license_detail_user_status')">
+                <oui-column data-title="'microsoft_office_license_detail_user_status' | translate">
                     <span class="label"
                           data-ng-if="!$row.isVirtual && $row.status"
-                          data-ng-bind="tr('microsoft_office_license_user_status_' + $row.status)"
+                          data-ng-bind="'microsoft_office_license_user_status_' + $row.status | translate"
                           data-ng-class="{
                             'label-success': $row.status === 'ok',
                             'label-danger': $row.status === 'deleting' || $row.status === 'error',
@@ -29,16 +29,16 @@
                     </span>
                     <span class="label label-info"
                           data-ng-if="$row.isVirtual"
-                          data-ng-bind-html="$row.taskPendingId ? tr('microsoft_office_license_user_status_creating') : tr('microsoft_office_license_detail_user_not_configure')">
+                          data-ng-bind-html="($row.taskPendingId ? 'microsoft_office_license_user_status_creating' : 'microsoft_office_license_detail_user_not_configure') | translate">
                     </span>
                 </oui-column>
                 <oui-action-menu data-align="end" data-compact data-ng-if="!$row.isLoading">
-                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_change_password')}}"
+                    <oui-action-menu-item data-text="{{ 'microsoft_office_license_user_change_password' | translate }}"
                                           data-on-click="setAction('edit/password/microsoft-office-edit-password', {'user': $row, 'licenseId': currentLicense, 'license': $row.license})"
                                           data-ng-if="!$row.isVirtual"></oui-action-menu-item>
-                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_update')}}"
+                    <oui-action-menu-item data-text="{{ 'microsoft_office_license_user_update' | translate }}"
                                           data-on-click="setAction('user/update/microsoft-office-license-user-update', {'user': $row, 'licenseId': currentLicense, 'license': $row.license})"></oui-action-menu-item>
-                    <oui-action-menu-item data-text="{{tr('microsoft_office_license_user_delete')}}"
+                    <oui-action-menu-item data-text="{{ 'microsoft_office_license_user_delete' | translate }}"
                                           data-on-click="setAction('user/delete/microsoft-office-license-user-delete', {'user': $row, 'license': currentLicense})"
                                           data-ng-if="!$row.isVirtual"></oui-action-menu-item>
                 </oui-action-menu>
@@ -49,21 +49,21 @@
             <div class="mb-5">
                 <button data-ng-if="MicrosoftOfficeLicenseCtrl.license.tenant.serviceType === 'payAsYouGo'"
                         type="button" class="btn btn-block btn-default"
-                        data-i18n-static="microsoft_office_license_user_add"
+                        data-translate="microsoft_office_license_user_add"
                         data-ng-click="setAction('user/add/microsoft-office-license-user-add', {'license': usersCtrl.currentLicense});">
                 </button>
                 <button data-ng-if="MicrosoftOfficeLicenseCtrl.license.tenant.serviceType === 'prepaid'"
                         type="button" class="btn btn-block btn-default"
-                        data-i18n-static="microsoft_office_license_user_order"
+                        data-translate="microsoft_office_license_user_order"
                         data-ng-click="setAction('user/order/microsoft-office-license-user-order', {'license': usersCtrl.currentLicense});">
                 </button>
             </div>
             <p class="mb-5"
                data-ng-if="MicrosoftOfficeLicenseCtrl.guide">
                 <span class="fa fa-life-ring mr-2" aria-hidden="true"></span>
-                <span data-i18n-static="license_office_guide"></span><br>
+                <span data-translate="license_office_guide"></span><br>
                 <a data-ng-href="{{ MicrosoftOfficeLicenseCtrl.guide }}" target="_blank">
-                    <span data-i18n-static="license_office_guide_help"></span>
+                    <span data-translate="license_office_guide_help"></span>
                     <span class="fa fa-external-link" aria-hidden="true"></span>
                 </a>
             </p>

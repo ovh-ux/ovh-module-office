@@ -2,7 +2,7 @@
     <div data-wizard
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="deleteUser"
-         data-wizard-title="i18n.microsoft_office_license_detail_user_delete_title">
+         data-wizard-title="'microsoft_office_license_detail_user_delete_title' | translate">
 
         <div data-wizard-step
              data-wizard-step-valid="!deleteUserCtrl.loaders.deleting">
@@ -10,10 +10,10 @@
             <oui-spinner data-ng-if="deleteUserCtrl.loaders.deleting"></oui-spinner>
 
             <div data-ng-if="!deleteUserCtrl.loaders.deleting">
-                <p data-ng-bind-html="tr('microsoft_office_license_detail_user_delete_confirm', [deleteUserCtrl.user.activationEmail])"></p>
+                <p data-ng-bind-html="'microsoft_office_license_detail_user_delete_confirm' | translate: { t0: deleteUserCtrl.user.activationEmail }"></p>
                 <ul>
-                    <li data-i18n-static="microsoft_office_license_detail_user_delete_info1"></li>
-                    <li data-i18n-static="microsoft_office_license_detail_user_delete_info2"></li>
+                    <li data-translate="microsoft_office_license_detail_user_delete_info1"></li>
+                    <li data-translate="microsoft_office_license_detail_user_delete_info2"></li>
                 </ul>
             </div>
         </div>

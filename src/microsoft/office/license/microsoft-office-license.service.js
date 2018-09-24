@@ -1,13 +1,13 @@
 angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseService', class MicrosoftOfficeLicenseService {
-  constructor($cacheFactory, $http, $q, $window, constants, OvhHttp, Poll, translator, User) {
+  constructor($cacheFactory, $http, $q, $translate, $window, constants, OvhHttp, Poll, User) {
     this.$cacheFactory = $cacheFactory;
     this.$http = $http;
     this.$q = $q;
+    this.$translate = $translate;
     this.$window = $window;
     this.constants = constants;
     this.pollService = Poll;
     this.ovhHttp = OvhHttp;
-    this.translator = translator;
     this.User = User;
 
     this.basePath = 'apiv6/license/office';
@@ -207,7 +207,7 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
       },
       series: [],
       title: {
-        text: this.translator.tr('microsoft_office_license_usage_stats'),
+        text: this.$translate.instant('microsoft_office_license_usage_stats'),
       },
       xAxis: {
         type: 'datetime',
@@ -218,7 +218,7 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
         min: 0,
         tickInterval: 1,
         title: {
-          text: this.translator.tr('microsoft_office_license_peakcount'),
+          text: this.$translate.instant('microsoft_office_license_peakcount'),
         },
       },
     };
@@ -247,7 +247,7 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
 
         stat.series = _.map(dataByLicense, (value, oneLicense) => ({
           id: oneLicense,
-          name: this.translator.tr(`microsoft_office_license_${oneLicense}_serie_name`),
+          name: this.$translate.instant(`microsoft_office_license_${oneLicense}_serie_name`),
           data: value,
         }));
 
@@ -286,7 +286,7 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
 
   getLoginConditionsMessage() {
     const conditions = this.constructor.getLoginConditions();
-    return `${this.translator.tr('microsoft_office_license_add_user_login_conditions', [conditions.minLength, conditions.maxLength])}
-                ${this.translator.tr('microsoft_office_license_add_user_login_condition_exception')}`;
+    return `${this.$translate.instant('microsoft_office_license_add_user_login_conditions', { t0: conditions.minLength, t1: conditions.maxLength })}
+                ${this.$translate.instant('microsoft_office_license_add_user_login_condition_exception')}`;
   }
 });

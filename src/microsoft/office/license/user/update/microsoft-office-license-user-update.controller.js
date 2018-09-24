@@ -1,9 +1,10 @@
 angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicenseUserUpdateCtrl', class MicrosoftOfficeLicenseUserUpdateCtrl {
-  constructor(Alerter, MicrosoftOfficeLicenseService, $rootScope, $scope) {
+  constructor(Alerter, MicrosoftOfficeLicenseService, $rootScope, $scope, $translate) {
     this.alerter = Alerter;
     this.microsoftOfficeLicenseService = MicrosoftOfficeLicenseService;
     this.$scope = $scope;
     this.$rootScope = $rootScope;
+    this.$translate = $translate;
   }
 
   $onInit() {
@@ -32,10 +33,10 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
           activationEmail: `${this.user.login}@${this.user.service}`,
         })
         .then((task) => {
-          this.alerter.success(this.$scope.tr('microsoft_office_license_detail_user_edit_success'), this.$scope.alerts.main);
+          this.alerter.success(this.$translate.instant('microsoft_office_license_detail_user_edit_success'), this.$scope.alerts.main);
           return task;
         })
-        .catch(err => this.alerter.alertFromSWS(this.$scope.tr('microsoft_office_license_detail_user_edit_error'), err, this.$scope.alerts.main))
+        .catch(err => this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_detail_user_edit_error'), err, this.$scope.alerts.main))
         .finally(() => {
           this.loaders.userEdit = false;
           this.$rootScope.$broadcast('microsoft.office.license.user.edit');

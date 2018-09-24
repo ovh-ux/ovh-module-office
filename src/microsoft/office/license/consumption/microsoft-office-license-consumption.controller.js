@@ -1,11 +1,12 @@
 angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicenseConsumptionCtrl', class MicrosoftOfficeLicenseConsumptionCtrl {
   constructor(
-    $stateParams, $scope,
+    $stateParams, $scope, $translate,
     MicrosoftOfficeLicenseService, ChartjsFactory, OFFICE_LICENSE_CONSUMPTION,
   ) {
     this.$stateParams = $stateParams;
     this.$scope = $scope;
     this.licenseService = MicrosoftOfficeLicenseService;
+    this.$translate = $translate;
     this.ChartjsFactory = ChartjsFactory;
     this.constant = { OFFICE_LICENSE_CONSUMPTION };
 
@@ -53,7 +54,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
     })
       .then((series) => {
         this.stats = series;
-        this.stats.title.text = this.$scope.tr(`microsoft_office_license_usage_period_${this.selectedPeriod}`);
+        this.stats.title.text = this.$translate.instant(`microsoft_office_license_usage_period_${this.selectedPeriod}`);
 
         this.chart = new this.ChartjsFactory(
           angular.copy(this.constant.OFFICE_LICENSE_CONSUMPTION.chart),
