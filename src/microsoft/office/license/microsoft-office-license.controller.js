@@ -1,12 +1,13 @@
 angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicenseCtrl', class MicrosoftOfficeLicenseCtrl {
   constructor(
-    $rootScope, $stateParams, $scope, $timeout,
+    $rootScope, $stateParams, $scope, $timeout, $translate,
     Alerter, MicrosoftOfficeLicenseService, User,
   ) {
     this.$rootScope = $rootScope;
     this.$stateParams = $stateParams;
     this.$scope = $scope;
     this.$timeout = $timeout;
+    this.$translate = $translate;
     this.alerter = Alerter;
     this.licenseService = MicrosoftOfficeLicenseService;
     this.user = User;
@@ -101,11 +102,11 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
     _.set(tenant, 'displayName', this.newDisplayName.value);
     this.licenseService.edit(license, tenant)
       .then(() => {
-        this.alerter.success(this.$scope.tr('microsoft_office_license_edit_success'), this.$scope.alerts.tabs);
+        this.alerter.success(this.$translate.instant('microsoft_office_license_edit_success'), this.$scope.alerts.tabs);
         this.$rootScope.$broadcast('change.displayName', [this.$scope.currentLicense, this.newDisplayName.value]);
       })
       .catch((err) => {
-        this.alerter.alertFromSWS(this.$scope.tr('microsoft_office_license_edit_error'), err, this.$scope.alerts.main);
+        this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_edit_error'), err, this.$scope.alerts.main);
         this.license.tenant.displayName = oldDisplayName;
       })
       .finally(() => { this.editMode = false; });
