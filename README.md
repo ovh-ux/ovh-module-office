@@ -10,12 +10,6 @@
 
 ## Installation
 
-### Bower
-
-```sh
-$ bower install ovh-module-office --save
-```
-
 ### NPM
 
 ```sh
