@@ -9,7 +9,7 @@ angular.module('Module.microsoft', [
   $stateProvider.state('app.microsoft.office', {
     abstract: true,
     template: '<div ui-view></div>',
-    translations: ['.']
+    translations: ['.'],
   });
 
   $stateProvider.state('app.microsoft.office.product', {
@@ -29,7 +29,7 @@ angular.module('Module.microsoft', [
           configurationSelected: true,
         });
       }],
-    }
+    },
   });
 }])
   .constant('MICROSOFT_GUIDE_URLS', {});
