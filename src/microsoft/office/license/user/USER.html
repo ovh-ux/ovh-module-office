@@ -19,15 +19,15 @@
                     <span data-ng-repeat="licence in $row.licences track by $index" data-ng-bind="licence"></span>
                 </oui-column>
                 <oui-column data-title="'microsoft_office_license_detail_user_status' | translate">
-                    <span class="label"
+                    <span class="oui-status"
                           data-ng-if="!$row.isVirtual && $row.status"
                           data-ng-bind="'microsoft_office_license_user_status_' + $row.status | translate"
                           data-ng-class="{
-                            'label-success': $row.status === 'ok',
-                            'label-danger': $row.status === 'deleting' || $row.status === 'error',
-                            'label-info': $row.status === 'creating'}">
+                            'oui-status_success': $row.status === 'ok',
+                            'oui-status_error': $row.status === 'deleting' || $row.status === 'error',
+                            'oui-status_info': $row.status === 'creating'}">
                     </span>
-                    <span class="label label-info"
+                    <span class="oui-status oui-status_info"
                           data-ng-if="$row.isVirtual"
                           data-ng-bind-html="($row.taskPendingId ? 'microsoft_office_license_user_status_creating' : 'microsoft_office_license_detail_user_not_configure') | translate">
                     </span>
