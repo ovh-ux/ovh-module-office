@@ -22,10 +22,10 @@ angular.module('App', [
 
 ## Related
 
-* [Web Control Panel UI](https://github.com/ovh-ux/ovh-manager-web).
-* [Emailpro Module](https://github.com/ovh-ux/ovh-module-emailpro).
-* [Exchange Module](https://github.com/ovh-ux/ovh-module-exchange).
-* [Sharepoint Module](https://github.com/ovh-ux/ovh-module-sharepoint).
+* [ovh-manager-web](https://github.com/ovh-ux/ovh-manager-web) - OVH Control Panel Web UI
+* [ovh-module-emailpro](https://github.com/ovh-ux/ovh-module-emailpro) - Web Module Emailpro
+* [ovh-module-exchange](https://github.com/ovh-ux/ovh-module-exchange) - Web Module Exchange
+* [ovh-module-sharepoint](https://github.com/ovh-ux/ovh-module-sharepoint) - Web Module Sharepoint
 
 ## Contributing
 
