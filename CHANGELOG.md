@@ -1,3 +1,7 @@
+## [7.0.3](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.2...v7.0.3) (2018-11-20)
+
+
+
 <a name="7.0.2"></a>
 ## [7.0.2](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.1...v7.0.2) (2018-10-24)
 
