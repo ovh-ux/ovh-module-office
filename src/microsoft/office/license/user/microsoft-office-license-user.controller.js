@@ -20,6 +20,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
       .then((details) => {
         if (details.taskPendingId) {
           _.set(details, 'isLoading', true);
+          _.set(details, 'status', (details.status === 'ok' ? 'updating' : details.status));
           this.license.pollUserDetails(this.$scope.currentLicense, id, this.$scope)
             .then(() => this.delayedGetUsers())
             .finally(() => { _.set(details, 'isLoading', false); });
