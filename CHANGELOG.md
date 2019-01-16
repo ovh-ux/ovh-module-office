@@ -1,3 +1,15 @@
+## [7.0.5](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.4...v7.0.5) (2019-01-16)
+
+
+### Bug Fixes
+
+* **deps:** upgrade npm-run-all to v4.1.5 ([6d7f5bd](https://github.com/ovh-ux/ovh-module-office/commit/6d7f5bd))
+* **i18n:** retrieve translations ([50ff1c6](https://github.com/ovh-ux/ovh-module-office/commit/50ff1c6))
+* **i18n:** submit translations ([bfc4e12](https://github.com/ovh-ux/ovh-module-office/commit/bfc4e12))
+* **license.user:** edit user while update in progress ([#77](https://github.com/ovh-ux/ovh-module-office/issues/77)) ([500c5af](https://github.com/ovh-ux/ovh-module-office/commit/500c5af))
+
+
+
 ## [7.0.4](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.3...v7.0.4) (2018-11-22)
 
 
