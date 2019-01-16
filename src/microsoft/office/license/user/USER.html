@@ -25,7 +25,7 @@
                           data-ng-class="{
                             'oui-status_success': $row.status === 'ok',
                             'oui-status_error': $row.status === 'deleting' || $row.status === 'error',
-                            'oui-status_info': $row.status === 'creating'}">
+                            'oui-status_info': $row.status === 'creating' || $row.status === 'updating'}">
                     </span>
                     <span class="oui-status oui-status_info"
                           data-ng-if="$row.isVirtual"
