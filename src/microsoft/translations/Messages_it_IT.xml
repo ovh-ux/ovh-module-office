@@ -50,6 +50,7 @@
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Record txt</translation>
    <translation id="microsoft_office_license_detail_state_status" qtlid="26443">Stato</translation>
    <translation id="microsoft_office_license_user_status_creating" qtlid="26227">In creazione</translation>
+   <translation id="microsoft_office_license_user_status_updating">Mise à jour</translation>
    <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">In corso di eliminazione</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Creata</translation>
    <translation id="microsoft_office_license_user_status_error" qtlid="26407">Errore</translation>
