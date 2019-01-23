@@ -11,7 +11,7 @@
    <translation id="microsoft_office_license_detail_zipcode" qtlid="236268">Código postal</translation>
    <translation id="microsoft_office_license_detail_city" qtlid="33310">Ciudad</translation>
    <translation id="microsoft_office_license_detail_address" qtlid="30430">Dirección </translation>
-   <translation id="microsoft_office_license_detail_phone" qtlid="34174">Téléphone</translation>
+   <translation id="microsoft_office_license_detail_phone" qtlid="34174">Teléfono</translation>
    <translation id="microsoft_office_license_detail_status" qtlid="26443">Estado</translation>
    <translation id="microsoft_office_license_detail_displayName" qtlid="264771">Nombre que se muestra</translation>
    <translation id="microsoft_office_license_generals_informations_title" qtlid="27115">Información general</translation>
@@ -49,10 +49,11 @@
    <translation id="microsoft_office_license_detail_state_domainName" qtlid="264836">Dominio</translation>
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Entrada TXT</translation>
    <translation id="microsoft_office_license_detail_state_status" qtlid="26443">Estado</translation>
-   <translation id="microsoft_office_license_user_status_creating" qtlid="26227">En création</translation>
-   <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">Eliminando</translation>
+   <translation id="microsoft_office_license_user_status_creating" qtlid="26227">En proceso de creación</translation>
+   <translation id="microsoft_office_license_user_status_updating">Mise à jour</translation>
+   <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">En proceso de eliminación</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Creada </translation>
-   <translation id="microsoft_office_license_user_status_error" qtlid="26407">Erreur</translation>
+   <translation id="microsoft_office_license_user_status_error" qtlid="26407">Error</translation>
    <translation id="microsoft_office_license_user_change_password" qtlid="80394">Changer le mot de passe</translation>
    <translation id="microsoft_office_license_user_update" qtlid="404512">Editar la cuenta</translation>
    <translation id="microsoft_office_license_user_delete" qtlid="150294">Eliminar la cuenta</translation>
