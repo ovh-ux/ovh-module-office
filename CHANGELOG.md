@@ -1,3 +1,12 @@
+## [7.0.6](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.5...v7.0.6) (2019-01-23)
+
+
+### Bug Fixes
+
+* **i18n:** retrieve translations ([a1a588d](https://github.com/ovh-ux/ovh-module-office/commit/a1a588d))
+
+
+
 ## [7.0.5](https://github.com/ovh-ux/ovh-module-office/compare/v7.0.4...v7.0.5) (2019-01-16)
 
 
