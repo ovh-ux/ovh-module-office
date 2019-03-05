@@ -7,7 +7,7 @@
    <translation id="microsoft_office_license_officeProPlus" qtlid="253231">Office Pro Plus</translation>
 
    <translation id="microsoft_office_license_detail_firstname" qtlid="23323">Nombre</translation>
-   <translation id="microsoft_office_license_detail_lastname" qtlid="3818">Nombre</translation>
+   <translation id="microsoft_office_license_detail_lastname" qtlid="3818">Apellidos</translation>
    <translation id="microsoft_office_license_detail_zipcode" qtlid="236268">Código postal</translation>
    <translation id="microsoft_office_license_detail_city" qtlid="33310">Localidad</translation>
    <translation id="microsoft_office_license_detail_address" qtlid="30430">Dirección</translation>
@@ -28,7 +28,7 @@
    <translation id="microsoft_office_license_peakcount" qtlid="253556">Máximo diario de licencias</translation>
 
    <translation id="microsoft_office_license_detail_user_firstname" qtlid="23323">Nombre</translation>
-   <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Nombre</translation>
+   <translation id="microsoft_office_license_detail_user_lastname" qtlid="3818">Apellidos</translation>
    <translation id="microsoft_office_license_detail_user_status" qtlid="26443">Estado</translation>
    <translation id="microsoft_office_license_detail_user_error" qtlid="226423">Se ha producido un error:</translation>
    <translation id="microsoft_office_license_detail_user_activationEmail" qtlid="264797">Correo electrónico de activación</translation>
@@ -81,7 +81,7 @@
    <translation id="microsoft_office_license_add_user_price_warning" qtlid="363388">Se le facturará según el número de licencias activas en el mes en curso.</translation>
    <translation id="microsoft_office_license_add_user_domain_label" qtlid="264888">Dominio Office</translation>
    <translation id="microsoft_office_license_add_user_firstName_label" qtlid="23323">Nombre</translation>
-   <translation id="microsoft_office_license_add_user_lastName_label" qtlid="3818">Nombre</translation>
+   <translation id="microsoft_office_license_add_user_lastName_label" qtlid="3818">Apellidos</translation>
    <translation id="microsoft_office_license_add_user_license_label" qtlid="264901">Licencia utilizada </translation>
    <translation id="microsoft_office_license_add_user_login_label" qtlid="41062">Usuario</translation>
    <translation id="microsoft_office_license_add_user_required" qtlid="237096">Este campo es obligatorio.</translation>
