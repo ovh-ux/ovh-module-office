@@ -10,7 +10,7 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
-    "lint": "run-p lint:css lint:js",
+    "lint": "run-p lint:css lint:html lint:js",
     "lint:css": "stylelint 'src/**/*.less' --fix",
     "lint:html": "htmlhint 'src/**/*.html'",
     "lint:js": "eslint --quiet --fix --format=pretty ./src",
