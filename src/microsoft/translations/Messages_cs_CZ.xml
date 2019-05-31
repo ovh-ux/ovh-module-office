@@ -50,7 +50,7 @@
    <translation id="microsoft_office_license_detail_state_txtEntry" qtlid="264849">Záznam TXT</translation>
    <translation id="microsoft_office_license_detail_state_status" qtlid="26443">Stav</translation>
    <translation id="microsoft_office_license_user_status_creating" qtlid="26227">Vytváří se</translation>
-   <translation id="microsoft_office_license_user_status_updating">Mise à jour</translation>
+   <translation id="microsoft_office_license_user_status_updating" qtlid="26863">Aktualizovat</translation>
    <translation id="microsoft_office_license_user_status_deleting" qtlid="133929">Odstraňování</translation>
    <translation id="microsoft_office_license_user_status_ok" qtlid="264862">Hotovo</translation>
    <translation id="microsoft_office_license_user_status_error" qtlid="26407">Chyba</translation>
