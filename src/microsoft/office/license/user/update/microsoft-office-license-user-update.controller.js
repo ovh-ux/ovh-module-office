@@ -36,7 +36,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
           this.alerter.success(this.$translate.instant('microsoft_office_license_detail_user_edit_success'), this.$scope.alerts.main);
           return task;
         })
-        .catch(err => this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_detail_user_edit_error'), err, this.$scope.alerts.main))
+        .catch((err) => this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_detail_user_edit_error'), err, this.$scope.alerts.main))
         .finally(() => {
           this.loaders.userEdit = false;
           this.$rootScope.$broadcast('microsoft.office.license.user.edit');

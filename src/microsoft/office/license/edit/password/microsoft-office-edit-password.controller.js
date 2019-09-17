@@ -20,7 +20,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficePasswo
           this.model.notifyEmail = '';
         }
       })
-      .catch(err => this.alerter.error(err))
+      .catch((err) => this.alerter.error(err))
       .finally(() => { this.loaders.infos = false; });
   }
 
@@ -52,7 +52,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficePasswo
 
       return this.licenseService.editPassword(this.licenseId, this.user.activationEmail, this.model)
         .then(() => this.alerter.success(this.$translate.instant('microsoft_office_license_edit_password_success'), this.$scope.alerts.main))
-        .catch(err => this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_edit_password_error'), err, this.$scope.alerts.main))
+        .catch((err) => this.alerter.alertFromSWS(this.$translate.instant('microsoft_office_license_edit_password_error'), err, this.$scope.alerts.main))
         .finally(() => {
           this.loaders.edit = false;
           this.$scope.resetAction();

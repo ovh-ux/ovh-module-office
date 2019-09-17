@@ -47,8 +47,8 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
       this.loaders.domains = true;
 
       return this.licenseService.getDomain(this.$scope.currentLicense, domain)
-        .then(domainDetails => domainDetails)
-        .catch(err => this.alerter.error(err))
+        .then((domainDetails) => domainDetails)
+        .catch((err) => this.alerter.error(err))
         .finally(() => { this.loaders.domains = false; });
     };
 

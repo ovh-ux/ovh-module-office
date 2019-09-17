@@ -20,8 +20,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   get(licenseId) {
     return this.$http.get(`${this.basePath}/${licenseId}`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -32,8 +32,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   edit(licenseId, officeTenant) {
     return this.$http.put(`${this.basePath}/${licenseId}`, officeTenant)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -45,8 +45,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   editPassword(licenseId, activationEmail, data) {
     return this.$http.post(`${this.basePath}/${licenseId}/user/${activationEmail}/changePassword`, data)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -77,8 +77,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   getUsers(licenseId) {
     return this.$http.get(`${this.basePath}/${licenseId}/user`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -87,8 +87,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   getLicenses() {
     return this.$http.get(`${this.basePath}.json`)
-      .then(response => response.data.models['license.office.LicenceEnum'].enum)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data.models['license.office.LicenceEnum'].enum)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -109,8 +109,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   getUserDetails(licenseId, userId) {
     return this.$http.get(`${this.basePath}/${licenseId}/user/${userId}`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   pollUserDetails(licenseId, userId, $scope) {
@@ -140,8 +140,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   addUser(licenseId, data) {
     return this.$http.post(`${this.basePath}/${licenseId}/user`, data)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err));
   }
 
   /**
@@ -153,8 +153,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   updateUser(serviceName, activationEmail, data) {
     return this.$http.put(`${this.basePath}/${serviceName}/user/${activationEmail}`, data)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err));
   }
 
   /**
@@ -165,8 +165,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   deleteUser(licenseId, userId) {
     return this.$http.delete(`${this.basePath}/${licenseId}/user/${userId}`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -176,8 +176,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   getDomainsId(licenseId) {
     return this.$http.get(`${this.basePath}/${licenseId}/domain`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -188,8 +188,8 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
    */
   getDomain(licenseId, domain) {
     return this.$http.get(`${this.basePath}/${licenseId}/domain/${domain}`)
-      .then(response => response.data)
-      .catch(err => this.$q.reject(err.data));
+      .then((response) => response.data)
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**
@@ -253,7 +253,7 @@ angular.module('Module.microsoft.services').service('MicrosoftOfficeLicenseServi
 
         return stat;
       })
-      .catch(err => this.$q.reject(err.data));
+      .catch((err) => this.$q.reject(err.data));
   }
 
   /**

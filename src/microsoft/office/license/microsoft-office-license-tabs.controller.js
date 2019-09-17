@@ -21,7 +21,7 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
     };
 
     if (!_.isNull(this.$stateParams.tab)
-      && _.some(this.$scope.tabs, item => item === angular.uppercase(this.$stateParams.tab))) {
+      && _.some(this.$scope.tabs, (item) => item === angular.uppercase(this.$stateParams.tab))) {
       this.$scope.setSelectedTab(angular.uppercase(this.$stateParams.tab));
     } else {
       this.$scope.setSelectedTab(this.defaultTab);

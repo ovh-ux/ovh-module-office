@@ -38,8 +38,8 @@ angular.module('Module.microsoft.controllers').controller('MicrosoftOfficeLicens
     this.users = null;
 
     return this.license.getUsers(this.currentLicense)
-      .then((users) => { this.users = users.map(id => ({ id })); })
-      .catch(err => this.Alerter.error(err.message, this.$scope.alerts.tabs));
+      .then((users) => { this.users = users.map((id) => ({ id })); })
+      .catch((err) => this.Alerter.error(err.message, this.$scope.alerts.tabs));
   }
 
   delayedGetUsers() {
